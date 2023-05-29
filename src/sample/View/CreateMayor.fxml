@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="538.0" prefWidth="411.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.CreateMayorController">
+   <children>
+      <Button fx:id="mayorCreateBTN" layoutX="158.0" layoutY="461.0" mnemonicParsing="false" onAction="#createMayor" prefHeight="43.0" prefWidth="94.0" style="-fx-background-radius: 15; -fx-background-color: #c8d6e5; -fx-border-color: #01a3a4; -fx-border-radius: 15; -fx-border-width: 4; -fx-border-insets: -2;" text="Create" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Button>
+      <Label layoutX="137.0" layoutY="188.0" text="Personnel code:" textAlignment="CENTER" textFill="#bbecfa">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+         </font></Label>
+      <Label layoutX="137.0" layoutY="257.0" prefHeight="25.0" prefWidth="159.0" text="Employment year:" textFill="#bbecfa">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+         </font></Label>
+      <TextField fx:id="mayorPersonnelCode" layoutX="132.0" layoutY="213.0" prefHeight="25.0" prefWidth="150.0" promptText="Mayor personnel code" />
+      <TextField fx:id="mayorEmploymentYear" layoutX="132.0" layoutY="282.0" prefHeight="25.0" prefWidth="150.0" promptText="Mayor employment year" />
+      <Label layoutX="132.0" layoutY="390.0" text="Password:" textAlignment="CENTER" textFill="#bbecfa">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="105.0" layoutY="3.0" prefHeight="48.0" prefWidth="202.0" text="Create mayor" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+         </font>
+      </Label>
+      <Line endX="133.0" layoutX="189.0" layoutY="51.0" startX="-100.0" stroke="WHITE" style="-fx-stroke-width: 1.5;" />
+      <PasswordField fx:id="mayorPassword" layoutX="130.0" layoutY="415.0" prefHeight="25.0" prefWidth="150.0" promptText="Mayor password" />
+      <TextField fx:id="mayorLName" layoutX="132.0" layoutY="148.0" prefHeight="25.0" prefWidth="150.0" promptText="Mayor last name" />
+      <Label layoutX="135.0" layoutY="123.0" text="Last name:" textFill="#bbecfa">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="63.0" text="First name:" textAlignment="CENTER" textFill="#bbecfa">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mayorFName" layoutX="131.0" layoutY="88.0" prefHeight="25.0" prefWidth="150.0" promptText="Mayor first name" />
+      <Button fx:id="BackBTN" layoutX="349.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
+      <Label layoutX="137.0" layoutY="321.0" text="Salary base:" textFill="#bbecfa">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+         </font></Label>
+      <TextField fx:id="mayorSalaryBase" layoutX="131.0" layoutY="346.0" prefHeight="25.0" prefWidth="150.0" promptText="Mayor salary base" />
+   </children>
+</AnchorPane>

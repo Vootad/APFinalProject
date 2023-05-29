@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="499.0" prefWidth="420.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.View.MayorsList">
+   <children>
+      <VBox alignment="CENTER" layoutX="66.0" layoutY="97.0" prefHeight="373.0" prefWidth="288.0" style="-fx-spacing: 20;">
+         <children>
+            <TextField editable="false" prefHeight="58.0" prefWidth="288.0" style="-fx-background-color: #2022b5;" />
+            <TextField editable="false" prefHeight="60.0" prefWidth="288.0" style="-fx-background-color: #2022b5;" />
+            <TextField editable="false" prefHeight="60.0" prefWidth="288.0" style="-fx-background-color: #2022b5;" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="111.0" text="Delete" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="111.0" text="Edit" textAlignment="CENTER" />
+         </children></VBox>
+      <Label alignment="CENTER" layoutX="71.0" layoutY="14.0" prefHeight="56.0" prefWidth="279.0" text="Mayor information" textFill="#64d8ff">
+         <font>
+            <Font name="Franklin Gothic Demi" size="27.0" />
+         </font>
+      </Label>
+      <Line endX="210.0" layoutX="155.0" layoutY="70.0" startX="-100.0" style="-fx-stroke-width: 3;" />
+      <Button alignment="CENTER" layoutX="354.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #0c2461;" text="back-&gt;" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="485.0" prefWidth="401.0" style="-fx-background-color: #0c2461; -fx-border-color: #000000; -fx-border-width: 6;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.UserMenuController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="45.0" prefHeight="37.0" prefWidth="333.0" style="-fx-background-color: #60a3bc; -fx-background-radius: 10;" text="Here You can manage your city" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Mongolian Baiti" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="ListBTN" alignment="CENTER" layoutX="77.0" layoutY="390.0" mnemonicParsing="false" onAction="#goToList" prefHeight="37.0" prefWidth="248.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 10; -fx-border-color: #0abde3; -fx-border-radius: 8; -fx-border-width: 3;" text="List of municipal building members">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <VBox alignment="CENTER" layoutX="127.0" layoutY="106.0" prefHeight="274.0" prefWidth="148.0" style="-fx-border-width: 3; -fx-border-color: #ffffff; -fx-spacing: 15;">
+         <children>
+            <Button fx:id="CreateMayorBTN" mnemonicParsing="false" onAction="#goToCreateMayor" prefHeight="37.0" prefWidth="125.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 8;" text="Create mayor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="CreateDeputyBTN" mnemonicParsing="false" onAction="#CreateDeputyPage" prefHeight="37.0" prefWidth="126.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 8;" text="Create deputy">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="CreateInspectorBTN" mnemonicParsing="false" onAction="#goToCreateInspector" prefHeight="37.0" prefWidth="126.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 8;" text="Create inspector">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="CreateSecurityBTN" mnemonicParsing="false" onAction="#goToCreateSecurity" prefHeight="37.0" prefWidth="125.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 8;" text="Create security">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="CreateEmploeeBTN" mnemonicParsing="false" onAction="#CreateEmployeePage" prefHeight="37.0" prefWidth="126.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 8;" text="Create employee">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Button fx:id="BackBTN" layoutX="341.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToFirstPage" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="WHITE" />
+   </children>
+</AnchorPane>

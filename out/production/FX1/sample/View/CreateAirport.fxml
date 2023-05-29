@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="508.0" prefWidth="411.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.CreateAirportController">
+
+    <children>
+        <Button fx:id="airportCreateBTN" layoutX="157.0" layoutY="428.0" mnemonicParsing="false" onAction="#CreateAirport" prefHeight="43.0" prefWidth="94.0" style="-fx-background-radius: 15; -fx-background-color: #c8d6e5; -fx-border-color: #01a3a4; -fx-border-radius: 15; -fx-border-width: 4; -fx-border-insets: -2;" text="Create" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font></Button>
+        <Label alignment="CENTER" layoutX="99.0" layoutY="15.0" prefHeight="48.0" prefWidth="215.0" text="Build an airport" textFill="WHITE">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+            </font>
+        </Label>
+        <Line endX="156.0" layoutX="178.0" layoutY="63.0" startX="-100.0" stroke="WHITE" style="-fx-stroke-width: 1.5;" />
+        <Button fx:id="BackBTN" layoutX="349.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
+        <VBox layoutX="45.0" layoutY="220.0" prefHeight="168.0" prefWidth="216.0" style="-fx-spacing: 7.5;">
+            <children>
+                <Label text="Name:" textAlignment="CENTER" textFill="#bbecfa">
+                    <font>
+                        <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                    </font>
+                </Label>
+                <Line endX="100.0" startX="-100.0" stroke="#727274" />
+                <Label text="Number of employees:" textFill="#bbecfa">
+                    <font>
+                        <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                    </font>
+                </Label>
+                <Line endX="100.0" startX="-100.0" stroke="#727274" />
+                <Label style="-fx-line-spacing: 15;" text="Construction cost:" textAlignment="CENTER" textFill="#bbecfa">
+                    <font>
+                        <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                    </font>
+                </Label>
+                <Line endX="100.0" startX="-100.0" stroke="#727274" />
+                <Label text="Area:" textFill="#bbecfa">
+                    <font>
+                        <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="264.0" layoutY="220.0" prefHeight="168.0" prefWidth="100.0" style="-fx-spacing: 15;">
+            <children>
+                <TextField fx:id="airportName" prefHeight="25.0" prefWidth="149.0" />
+                <TextField fx:id="airportNOfEmployees" />
+                <TextField fx:id="airportConstructionCost" />
+                <TextField fx:id="airportArea" />
+            </children>
+        </VBox>
+        <ImageView fitHeight="124.0" fitWidth="157.0" layoutX="137.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../airport-.jpg" />
+            </image>
+        </ImageView>
+    </children>
+
+</AnchorPane>

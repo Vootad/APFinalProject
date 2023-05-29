@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="571.0" prefWidth="429.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.CreateSecurityController">
+    <children>
+        <Button fx:id="securityCreateBTN" layoutX="158.0" layoutY="481.0" mnemonicParsing="false" onAction="#createSecurity" prefHeight="43.0" prefWidth="94.0" style="-fx-background-radius: 15; -fx-background-color: #c8d6e5; -fx-border-color: #01a3a4; -fx-border-radius: 15; -fx-border-width: 4; -fx-border-insets: -2;" text="Create" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font></Button>
+        <Label alignment="CENTER" layoutX="105.0" layoutY="3.0" prefHeight="48.0" prefWidth="202.0" text="Create security" textFill="WHITE">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+            </font>
+        </Label>
+        <Line endX="133.0" layoutX="189.0" layoutY="51.0" startX="-100.0" stroke="WHITE" style="-fx-stroke-width: 1.5;" />
+        <Button fx:id="BackBTN" layoutX="349.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
+      <VBox layoutX="232.0" layoutY="87.0" prefHeight="369.0" prefWidth="150.0" style="-fx-spacing: 30;">
+         <children>
+              <TextField fx:id="securityFName" prefHeight="25.0" prefWidth="150.0" />
+              <TextField fx:id="securityLName" prefHeight="25.0" prefWidth="150.0" />
+              <TextField fx:id="securityPersonnelCode" prefHeight="25.0" prefWidth="150.0" />
+              <TextField fx:id="securityEmploymentYear" prefHeight="25.0" prefWidth="150.0" />
+              <TextField fx:id="securitySalaryBase" prefHeight="25.0" prefWidth="150.0" />
+            <TextField fx:id="securityDShift" prefHeight="25.0" prefWidth="150.0" />
+            <TextField fx:id="securityNShift" />
+         </children>
+      </VBox>
+      <VBox layoutX="43.0" layoutY="87.0" prefHeight="361.0" prefWidth="100.0" style="-fx-spacing: 15;">
+         <children>
+              <Label text="First name:" textAlignment="CENTER" textFill="#bbecfa">
+                  <font>
+                      <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                  </font>
+              </Label>
+            <Line endX="70.0" startX="-100.0" />
+              <Label text="Last name:" textFill="#bbecfa">
+                  <font>
+                      <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                  </font>
+              </Label>
+            <Line endX="70.0" startX="-100.0" />
+              <Label text="Personnel code:" textAlignment="CENTER" textFill="#bbecfa">
+                  <font>
+                      <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                  </font>
+            </Label>
+            <Line endX="70.0" startX="-100.0" />
+              <Label prefHeight="25.0" prefWidth="159.0" text="Employment year:" textFill="#bbecfa">
+                  <font>
+                      <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                  </font>
+            </Label>
+            <Line endX="70.0" startX="-100.0" />
+              <Label text="Salary base:" textFill="#bbecfa">
+                  <font>
+                      <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                  </font>
+            </Label>
+            <Line endX="70.0" startX="-100.0" />
+              <Label text="Overtime d shift:" textAlignment="CENTER" textFill="#bbecfa">
+                  <font>
+                      <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+                  </font>
+              </Label>
+            <Line endX="70.0" startX="-100.0" />
+            <Label text="Overtime n shift:" textFill="#bbecfa">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
