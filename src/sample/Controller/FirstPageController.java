@@ -5,10 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import sample.AL;
+import sample.LoaderClass;
 import sample.Model.Buildings;
 import javafx.scene.control.Button;
 
 
+import javax.swing.*;
 import java.awt.*;
 import java.nio.file.Paths;
 
@@ -22,31 +25,12 @@ public class FirstPageController {
     private Button librarySystem;
 
 
-//    String userUsername = "Super user";
-//    String userPassword = "SUser00";
 
     @FXML
     public void goToMayorLogin(javafx.event.ActionEvent event) {
         Stage stage = (Stage) this.mayorLogin.getScene().getWindow();
         stage.close();
-        CreateLoginPage();
-    }
-
-    public void CreateLoginPage(){
-        try {
-            Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(Paths.get("src/sample/View/LoginMayor.fxml").toUri().toURL());
-
-            stage.setScene(new Scene(root));
-            stage.setTitle("Mayor login page");
-
-            stage.setResizable(false);
-            stage.show();
-        }
-        catch (Exception e) {
-            System.out.println("Exception");
-        }
+        LoaderClass.CreateLoginPage();
     }
 
 
@@ -54,48 +38,18 @@ public class FirstPageController {
     public void goToUserLogin(javafx.event.ActionEvent event) {
         Stage stage = (Stage) this.userLogin.getScene().getWindow();
         stage.close();
-        CreateUserLoginPage();
+        LoaderClass.CreateUserLoginPage();
     }
-
-    public void CreateUserLoginPage(){
-        try {
-            Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(Paths.get("src/sample/View/UserLogin.fxml").toUri().toURL());
-
-            stage.setScene(new Scene(root));
-            stage.setTitle("User login page");
-
-            stage.setResizable(false);
-            stage.show();
-        }
-        catch (Exception e) {
-            System.out.println("Exception");
-        }
-    }
-
 
     @FXML
     public void goToLibrary(javafx.event.ActionEvent event) {
-        Stage stage = (Stage) this.userLogin.getScene().getWindow();
-        stage.close();
-        CreateLibraryPage();
-    }
-
-    public void CreateLibraryPage(){
-//        try {
-//            Stage stage = new Stage();
-//            FXMLLoader loader = new FXMLLoader();
-//            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library.fxml").toUri().toURL());
-//
-//            stage.setScene(new Scene(root));
-//            stage.setTitle("Library page");
-//
-//            stage.setResizable(false);
-//            stage.show();
-//        }
-//        catch (Exception e) {
-//            System.out.println("Exception");
-//        }
+        if (AL.LibraryList.size() == 1) {
+            Stage stage = (Stage) this.librarySystem.getScene().getWindow();
+            stage.close();
+            LoaderClass.showLibraryPage();
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "There is no library!");
+        }
     }
 }

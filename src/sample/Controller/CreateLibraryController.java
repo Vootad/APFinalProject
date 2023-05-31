@@ -12,6 +12,7 @@ import java.nio.file.Paths;
 
 import javafx.scene.control.TextField;
 import sample.AL;
+import sample.LoaderClass;
 import sample.Main;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
@@ -22,6 +23,8 @@ import javafx.scene.control.TextField;
 import sample.Model.Library;
 
 import javax.swing.*;
+
+import static sample.LoaderClass.*;
 
 public class CreateLibraryController {
     @FXML
@@ -50,32 +53,35 @@ public class CreateLibraryController {
 
     @FXML
     public void CreateLibrary(){
-        try{
-            Stage stage = (Stage) this.libraryCreateBTN.getScene().getWindow(); //click on Create button
-            String lName = libraryName.getText();//.toString();
-            String constructionCost;//.toString();
-            constructionCost = libraryConstructionCost.getText();
-            String area = libraryArea.getText();//.toString();
-            String username = lManagerUsername.getText();
-            String nationalCode = lManagerNationalCode.getText();
-            String password = lManagerPassword.getText();
+        if (AL.LibraryList.size() == 0) {
+            try {
+                Stage stage = (Stage) this.libraryCreateBTN.getScene().getWindow(); //click on Create button
+                String lName = libraryName.getText();//.toString();
+                String constructionCost;//.toString();
+                constructionCost = libraryConstructionCost.getText();
+                String area = libraryArea.getText();//.toString();
+                String username = lManagerUsername.getText();
+                String nationalCode = lManagerNationalCode.getText();
+                String password = lManagerPassword.getText();
 
-            Library l = new Library(lName , "0", constructionCost , area , username , nationalCode , password);
-            AL.LibraryList.add(l);
-            ////////////////////////
-            int lastL = AL.LibraryList.size()-1;
-            System.out.println("Name:  " + AL.LibraryList.get(lastL).getName());
-            System.out.println("saved");
-            ///////////////////////
-            stage.close();
-            showMayorAcc();
+                Library l = new Library(lName, "0", constructionCost, area, username, nationalCode, password);
+                AL.LibraryList.add(l);
+                ////////////////////////
+                int lastL = AL.LibraryList.size() - 1;
+                System.out.println("Name:  " + AL.LibraryList.get(lastL).getName());
+                System.out.println("saved");
+                ///////////////////////
+                stage.close();
+                LoaderClass.showMayorAcc();
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(null, "Fill in all fields correctly!");
+            }
         }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Fill in all fields!");
+        else {
+            JOptionPane.showMessageDialog(null, "You can create only 1 library!");
         }
-
     }
-
 
 
 
@@ -84,21 +90,7 @@ public class CreateLibraryController {
 
         Stage stage = (Stage) this.BackBTN.getScene().getWindow(); //click on sign up button
         stage.close();
-        showMayorAcc();
-    }
-    public void showMayorAcc(){
-        try {
-            Stage stage1 = new Stage();   //create new stage
-            FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(Paths.get("src/sample/View/MayorAccount.fxml").toUri().toURL());
-
-            stage1.setScene(new Scene(root)); //set UserMenu scene
-            stage1.setResizable(false);
-            stage1.show();
-        }
-        catch (Exception e) {
-            System.out.println("Exception");
-        }
+        LoaderClass.showMayorAcc();
     }
 
 

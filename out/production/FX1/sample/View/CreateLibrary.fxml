@@ -64,7 +64,7 @@
                 <TextField fx:id="libraryName" prefHeight="25.0" prefWidth="149.0" />
                 <TextField fx:id="libraryConstructionCost" />
                 <TextField fx:id="libraryArea" />
-                <TextField fx:id="lManagerusername" />
+                <TextField fx:id="lManagerUsername" />
                 <TextField fx:id="lManagerNationalCode" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="lManagerPassword" />
             </children>
