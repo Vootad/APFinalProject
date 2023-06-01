@@ -1,4 +1,4 @@
-package sample.Controller;
+package sample.Controller.Library;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -28,12 +28,12 @@ public class LibraryController {
         LoaderClass.createFirstPage();
     }
 
-//    @FXML
-//    public void setLoginToLibraryManagerBTN(javafx.event.ActionEvent event){
-//
-//        Stage stage = (Stage) this.loginToLibraryManagerBTN.getScene().getWindow(); //click on sign up button
-//        stage.close();
-//        LoaderClass.createLoginLManagerPage(); //not created
-//    }
+    @FXML
+    public void goToLoginManager(javafx.event.ActionEvent event){
+
+        Stage stage = (Stage) this.loginToLibraryManagerBTN.getScene().getWindow(); //click on sign up button
+        stage.close();
+        LoaderClass.showLoginManagerPage();
+    }
 
 }

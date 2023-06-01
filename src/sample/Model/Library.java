@@ -1,5 +1,7 @@
 package sample.Model;
 
+import sample.AL;
+
 public class Library extends Buildings{
 
     String lManagerUsername;
@@ -12,6 +14,7 @@ public class Library extends Buildings{
         this.lManagerNationalCode = lManagerNationalCode;
         this.lManagerPassword = lManagerPassword;
     }
+
 
     public String getlManagerUsername() {return lManagerUsername;}
 //    public void setlManagerUsername(String lManagerUsername) {this.lManagerUsername = lManagerUsername;}

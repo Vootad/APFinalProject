@@ -79,20 +79,6 @@ public class LoaderClass {
     }
 
 
-    public static void showLibraryPage(){
-        try {
-            Stage stage1 = new Stage();
-            FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library.fxml").toUri().toURL());
-
-            stage1.setScene(new Scene(root));
-            stage1.setResizable(false);
-            stage1.show();
-        }
-        catch (Exception e) {
-            System.out.println("Exception");
-        }
-    }
 
 
     public static void CreateLoginPage(){
@@ -130,5 +116,37 @@ public class LoaderClass {
         }
     }
 
+    //Library pages
 
+    public static void showLoginManagerPage(){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/LoginLManager.fxml").toUri().toURL());
+
+            stage.setScene(new Scene(root));
+            stage.setTitle("Library manager login page");
+            stage.setResizable(false);
+            stage.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+
+
+    public static void showLibraryPage(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/Library.fxml").toUri().toURL());
+
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
 }

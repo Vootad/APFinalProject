@@ -9,6 +9,7 @@ import sample.AL;
 import sample.LoaderClass;
 import sample.Model.Buildings;
 import javafx.scene.control.Button;
+import sample.Model.Library;
 
 
 import javax.swing.*;
@@ -43,9 +44,21 @@ public class FirstPageController {
 
     @FXML
     public void goToLibrary(javafx.event.ActionEvent event) {
+
+        Stage stage = (Stage) this.librarySystem.getScene().getWindow();
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////
+        Library l = new Library("1" , "1" , "1" , "1" , "1" , "1" , "1");
+        AL.LibraryList.add(l);
+        /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
         if (AL.LibraryList.size() == 1) {
-            Stage stage = (Stage) this.librarySystem.getScene().getWindow();
-            stage.close();
+                stage.close();
             LoaderClass.showLibraryPage();
         }
         else{

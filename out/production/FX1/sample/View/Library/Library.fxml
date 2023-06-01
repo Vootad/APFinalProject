@@ -4,13 +4,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="508.0" prefWidth="411.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LibraryController">
+<AnchorPane prefHeight="508.0" prefWidth="411.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.LibraryController">
 
     <children>
         <Button fx:id="BackBTN" layoutX="349.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
         <VBox alignment="CENTER" layoutX="31.0" layoutY="90.0" prefHeight="394.0" prefWidth="350.0" style="-fx-spacing: 40; -fx-background-color: #0d0768;">
             <children>
-                <Button fx:id="loginToLibraryManagerBTN" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-insets: -2; -fx-border-width: 4; -fx-border-radius: 30; -fx-background-color: #c4b6e8;" text="Login to manager">
+                <Button fx:id="loginToLibraryManagerBTN" mnemonicParsing="false" onAction="#goToLoginManager" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-insets: -2; -fx-border-width: 4; -fx-border-radius: 30; -fx-background-color: #c4b6e8;" text="Login to manager">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
