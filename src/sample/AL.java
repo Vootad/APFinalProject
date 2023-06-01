@@ -1,6 +1,7 @@
 package sample;
 
 import sample.Model.*;
+import sample.Model.LibraryP.LEmployee;
 
 import java.util.ArrayList;
 
@@ -15,4 +16,5 @@ public class AL {
     public static ArrayList<Library> LibraryList = new ArrayList<Library>();
     public static ArrayList<Airport> AirportList = new ArrayList<Airport>();
     public static ArrayList<University> UniversityList = new ArrayList<University>();
+    public static ArrayList<LEmployee>LElist = new ArrayList<>();
 }
