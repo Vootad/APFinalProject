@@ -35,7 +35,7 @@ public class LoginLManagerController {
              String password = lManagerLoginPassword.getText();
              if (AL.LibraryList.get(0).getlManagerUsername().equals(userName) && AL.LibraryList.get(0).getlManagerPassword().equals(password)) {
                  stage.close();
-              LoaderClass.ManagerLibaryPage();
+              LoaderClass.ManagerLibraryPage();
              }
              else {
                 JOptionPane.showMessageDialog(null, "Wrong username or password");

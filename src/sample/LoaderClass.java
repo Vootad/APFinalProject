@@ -5,7 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import java.nio.file.Paths;
-
 public class LoaderClass {
 
     public static void UserMenuPage() {
@@ -22,7 +21,6 @@ public class LoaderClass {
             System.out.println("Exception");
         }
     }
-
 
     public static void CreateMayorPage() {
         if(AL.MayorList.size() == 0)//only 1 mayor
@@ -78,9 +76,6 @@ public class LoaderClass {
         }
     }
 
-
-
-
     public static void CreateLoginPage(){
         try {
             Stage stage = new Stage();
@@ -98,7 +93,6 @@ public class LoaderClass {
         }
     }
 
-
     public static void CreateUserLoginPage(){
         try {
             Stage stage = new Stage();
@@ -115,6 +109,8 @@ public class LoaderClass {
             System.out.println("Exception");
         }
     }
+
+
 
     //Library pages
 
@@ -149,7 +145,7 @@ public class LoaderClass {
             System.out.println("Exception");
         }
     }
-    public static void ManagerLibaryPage(){
+    public static void ManagerLibraryPage(){
         try {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();
@@ -162,11 +158,38 @@ public class LoaderClass {
             System.out.println("Exception");
         }
     }
+
     public static void CreateEmployeeOfLibaryPage(){
         try {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/CreateLibaryEmployee.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+    public static void ViewEmployeeOfLibaryPage(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/LViewEmployees.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+    public static void CreateMembershipRequest(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/MembershipRequest.fxml").toUri().toURL());
             stage1.setScene(new Scene(root));
             stage1.setResizable(false);
             stage1.show();
