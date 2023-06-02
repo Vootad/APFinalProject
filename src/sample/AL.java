@@ -13,8 +13,10 @@ public class AL {
     public static ArrayList<Employee> EmployeesList = new ArrayList<Employee>();
 
     public static ArrayList<Hospital> HospitalList = new ArrayList<Hospital>();
-    public static ArrayList<Library> LibraryList = new ArrayList<Library>();
     public static ArrayList<Airport> AirportList = new ArrayList<Airport>();
     public static ArrayList<University> UniversityList = new ArrayList<University>();
+
+
+    public static ArrayList<Library> LibraryList = new ArrayList<Library>();
     public static ArrayList<LEmployee>LElist = new ArrayList<>();
 }

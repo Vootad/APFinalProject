@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="508.0" prefWidth="411.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.ManagerPageController">
+<AnchorPane prefHeight="508.0" prefWidth="411.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.MaanagerPageController">
 
     <children>
         <Button fx:id="BackBTN" layoutX="349.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
@@ -18,11 +18,11 @@
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="Memebers_Btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-insets: -2; -fx-border-width: 4; -fx-border-radius: 30; -fx-background-color: #c4b6e8;" text="List of members">
+                <Button fx:id="Memebers_Btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-insets: -2; -fx-border-width: 4; -fx-border-radius: 30; -fx-background-color: #c4b6e8;" text="Members">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="AuthorsList_Btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4; -fx-background-color: #c4b6e8;" text="List of authors">
+                <Button fx:id="Authors_Btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4; -fx-background-color: #c4b6e8;" text="Authors">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>

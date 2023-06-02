@@ -5,21 +5,21 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import sample.LoaderClass;
 
-public class MaanagerPageController {
+public class ManagerPageController {
     @FXML
-    private Button Create_btn;
+    private Button CreateEmployee_btn;
     @FXML
     private Button View_Btn;
     @FXML
-    private Button Memebers_Btn;
+    private Button MembersList_Btn;
     @FXML
-    private Button Authors_Btn;
+    private Button AuthorsList_Btn;
     @FXML
     private Button BackBTN;
     @FXML
-    public void gotoCreatePage(javafx.event.ActionEvent event){
+    public void gotoCreateEmployeePage(javafx.event.ActionEvent event){
 
-        Stage stage = (Stage) this.Create_btn.getScene().getWindow();
+        Stage stage = (Stage) this.CreateEmployee_btn.getScene().getWindow();
         stage.close();
         LoaderClass.CreateEmployeeOfLibaryPage();
     }

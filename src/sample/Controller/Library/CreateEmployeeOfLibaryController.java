@@ -30,12 +30,12 @@ public class CreateEmployeeOfLibaryController {
                 JOptionPane.showMessageDialog(null, "Name of employee is:  "+LElist.get(LElist.size()-1).getLEmployeeUserName());
                 JOptionPane.showMessageDialog(null, "Name of employee is:  "+LElist.get(LElist.size()-1).getLEmployeePassword());
                 stage.close();
-                LoaderClass.ManagerLibaryPage();
+                LoaderClass.ManagerLibraryPage();
     }
     @FXML
     public void Back(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.BackBTN.getScene().getWindow();
         stage.close();
-        LoaderClass.ManagerLibaryPage();
+        LoaderClass.ManagerLibraryPage();
     }
     }

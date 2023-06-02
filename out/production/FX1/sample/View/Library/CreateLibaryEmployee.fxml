@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="508.0" prefWidth="411.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.CreateEmployeeOfLibaryController">
 
     <children>
-        <Button fx:id="CreateLibaryEmployee_Btn" layoutX="159.0" layoutY="418.0" mnemonicParsing="false" onAction="#CreateEmployeeOfLibary" prefHeight="43.0" prefWidth="86.0" style="-fx-background-radius: 15; -fx-background-color: #c8d6e5; -fx-border-color: #01a3a4; -fx-border-radius: 15; -fx-border-width: 4; -fx-border-insets: -2;" text="Done" textAlignment="CENTER">
+        <Button fx:id="CreateLibaryEmployee_Btn" layoutX="159.0" layoutY="242.0" mnemonicParsing="false" onAction="#CreateEmployeeOfLibary" prefHeight="43.0" prefWidth="86.0" style="-fx-background-radius: 15; -fx-background-color: #c8d6e5; -fx-border-color: #01a3a4; -fx-border-radius: 15; -fx-border-width: 4; -fx-border-insets: -2;" text="Done" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font></Button>
@@ -20,18 +20,18 @@
             </font>
         </Label>
         <Line endX="133.0" layoutX="187.0" layoutY="62.0" startX="-100.0" stroke="WHITE" style="-fx-stroke-width: 1.5;" />
-        <TextField fx:id="employeePassword" layoutX="129.0" layoutY="322.0" prefHeight="33.0" prefWidth="149.0" promptText="Employee Password" />
-        <Label layoutX="129.0" layoutY="297.0" text="Password:" textFill="#bbecfa">
+        <TextField fx:id="employeePassword" layoutX="131.0" layoutY="172.0" promptText="Emoloyee Password" />
+        <Label layoutX="135.0" layoutY="147.0" text="Password:" textFill="#bbecfa">
             <font>
                 <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="129.0" layoutY="210.0" text="Username:" textAlignment="CENTER" textFill="#bbecfa">
+        <Label layoutX="132.0" layoutY="85.0" text="Username:" textAlignment="CENTER" textFill="#bbecfa">
             <font>
                 <Font name="Gill Sans Ultra Bold Condensed" size="20.0" />
             </font>
         </Label>
-        <TextField fx:id="employeeUsername" layoutX="131.0" layoutY="242.0" prefHeight="33.0" prefWidth="149.0" promptText="Employee Username" />
+        <TextField fx:id="employeeUsername" layoutX="131.0" layoutY="110.0" prefHeight="25.0" prefWidth="149.0" promptText="Employee Username" />
         <Label layoutX="86.0" layoutY="449.0" prefHeight="43.0" prefWidth="257.0" textFill="WHITE">
             <font>
                 <Font size="13.0" />
