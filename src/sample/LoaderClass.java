@@ -149,7 +149,7 @@ public class LoaderClass {
         try {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/ManagerOfLibraryPage.fxml").toUri().toURL());
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/ManagerOfLibaryPage.fxml").toUri().toURL());
             stage1.setScene(new Scene(root));
             stage1.setResizable(false);
             stage1.show();
@@ -164,6 +164,32 @@ public class LoaderClass {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/CreateLibaryEmployee.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+    public static void ViewEmployeeOfLibaryPage(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/LViewEmployees.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+    public static void CreateMembershipRequest(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/MembershipRequest.fxml").toUri().toURL());
             stage1.setScene(new Scene(root));
             stage1.setResizable(false);
             stage1.show();

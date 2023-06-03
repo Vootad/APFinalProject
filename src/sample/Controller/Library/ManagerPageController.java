@@ -24,6 +24,15 @@ public class ManagerPageController {
         LoaderClass.CreateEmployeeOfLibaryPage();
     }
     @FXML
+    public void gotoViewEmployeePage(javafx.event.ActionEvent event){
+
+        Stage stage = (Stage) this.View_Btn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ViewEmployeeOfLibaryPage();
+
+    }
+
+    @FXML
     public void Back(javafx.event.ActionEvent event){
 
         Stage stage = (Stage) this.BackBTN.getScene().getWindow();

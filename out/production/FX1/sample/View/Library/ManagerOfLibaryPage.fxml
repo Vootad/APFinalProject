@@ -4,25 +4,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="508.0" prefWidth="411.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.MaanagerPageController">
+<AnchorPane prefHeight="508.0" prefWidth="411.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.ManagerPageController">
 
     <children>
         <Button fx:id="BackBTN" layoutX="349.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
         <VBox alignment="CENTER" layoutX="31.0" layoutY="90.0" prefHeight="394.0" prefWidth="350.0" style="-fx-spacing: 40; -fx-background-color: #0d0768;">
             <children>
-                <Button fx:id="Create_btn" mnemonicParsing="false" onAction="#gotoCreatePage" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-insets: -2; -fx-border-width: 4; -fx-border-radius: 30; -fx-background-color: #c4b6e8;" text="Create Employee">
+                <Button fx:id="CreateEmployee_btn" mnemonicParsing="false" onAction="#gotoCreateEmployeePage" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-insets: -2; -fx-border-width: 4; -fx-border-radius: 30; -fx-background-color: #c4b6e8;" text="Create Employee">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="View_Btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-width: 4; -fx-border-radius: 30; -fx-border-insets: -2; -fx-background-color: #c4b6e8;" text="View the employees list">
+                <Button fx:id="View_Btn" mnemonicParsing="false" onAction="#gotoViewEmployeePage" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-width: 4; -fx-border-radius: 30; -fx-border-insets: -2; -fx-background-color: #c4b6e8;" text="View the employees list">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="Memebers_Btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-insets: -2; -fx-border-width: 4; -fx-border-radius: 30; -fx-background-color: #c4b6e8;" text="Members">
+                <Button fx:id="Memebers_Btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-insets: -2; -fx-border-width: 4; -fx-border-radius: 30; -fx-background-color: #c4b6e8;" text="List of members">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="Authors_Btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4; -fx-background-color: #c4b6e8;" text="Authors">
+                <Button fx:id="AuthorsList_Btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="275.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4; -fx-background-color: #c4b6e8;" text="List of authors">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>

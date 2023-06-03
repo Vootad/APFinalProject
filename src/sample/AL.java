@@ -2,6 +2,7 @@ package sample;
 
 import sample.Model.*;
 import sample.Model.LibraryP.LEmployee;
+import sample.Model.LibraryP.MemberRequest;
 
 import java.util.ArrayList;
 
@@ -19,4 +20,5 @@ public class AL {
 
     public static ArrayList<Library> LibraryList = new ArrayList<Library>();
     public static ArrayList<LEmployee>LElist = new ArrayList<>();
+    public static ArrayList<MemberRequest>memberRequests = new ArrayList<>();
 }
