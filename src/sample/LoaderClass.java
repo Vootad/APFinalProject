@@ -159,11 +159,11 @@ public class LoaderClass {
         }
     }
 
-    public static void CreateEmployeeOfLibaryPage(){
+    public static void CreateEmployeeOfLibraryPage(){
         try {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/CreateLibaryEmployee.fxml").toUri().toURL());
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/CreateLibraryEmployee.fxml").toUri().toURL());
             stage1.setScene(new Scene(root));
             stage1.setResizable(false);
             stage1.show();
@@ -172,7 +172,7 @@ public class LoaderClass {
             System.out.println("Exception");
         }
     }
-    public static void ViewEmployeeOfLibaryPage(){
+    public static void ViewEmployeeOfLibraryPage(){
         try {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();

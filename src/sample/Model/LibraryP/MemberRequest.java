@@ -5,15 +5,15 @@ import java.util.ArrayList;
 public class MemberRequest extends User {
     private String userName; //unique
     private String password;  //unique
-    private String memberShipCode; //unique
+//    private String memberShipCode; //unique
     private ArrayList<Book> memberBorrowedBooksList = new ArrayList<>();
 
 
-    public MemberRequest(String fName , String lName , String nationalCode , String age , String gender , String phoneNumber , String address , String username , String password , String memberShipCode){
+    public MemberRequest(String fName , String lName , String nationalCode , String age , String gender , String phoneNumber , String address , String username , String password ){
         super(fName , lName , nationalCode , age , gender , phoneNumber , address);
         this.userName = username;
         this.password = password;
-        this.memberShipCode = memberShipCode;
+//        this.memberShipCode = memberShipCode;
     }
 
 
@@ -31,12 +31,12 @@ public class MemberRequest extends User {
         this.password = password;
     }
 
-    public String getMemberShipCode() {
-        return memberShipCode;
-    }
-    public void setMemberShipCode(String memberShipCode) {
-        this.memberShipCode = memberShipCode;
-    }
+//    public String getMemberShipCode() {
+//        return memberShipCode;
+//    }
+//    public void setMemberShipCode(String memberShipCode) {
+//        this.memberShipCode = memberShipCode;
+//    }
 
     public ArrayList<Book> getMemberBorrowedBooksList() {
         return memberBorrowedBooksList;

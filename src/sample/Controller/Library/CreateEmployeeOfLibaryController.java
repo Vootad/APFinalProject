@@ -17,7 +17,7 @@ public class CreateEmployeeOfLibaryController {
     @FXML
     private TextField FName;
     @FXML
-    private TextField LName ;
+    private TextField LName;
     @FXML
     private TextField nationalCode;
     @FXML
@@ -36,28 +36,41 @@ public class CreateEmployeeOfLibaryController {
     private TextField password;
     @FXML
     private Button EmployeeCreateBTN;
-    public void CreateEmployeeOfLibary(javafx.event.ActionEvent event){
+
+    @FXML
+    public void CreateEmployeeOfLibrary(javafx.event.ActionEvent event) { //try catch
         Stage stage = (Stage) this.EmployeeCreateBTN.getScene().getWindow();
         String leName = FName.getText();
         String leLastname = LName.getText();
-        String leNationalCode = nationalCode.getText();
+        String leNationalCode = nationalCode.getText(); //unique ok
         String leAge = Employeeage.getText();
         String leGender = gender.getText();
         String lePhoneNumber = phoneNumber.getText();
         String leAddress = address.getText();
-        String leUserName = username.getText();
-        String lePassword = password.getText();
-        LEmployee le = new LEmployee(leName,leLastname,leNationalCode,leAge,leGender,lePhoneNumber,leAddress,leUserName,lePassword);
-                LElist.add(le);
-                JOptionPane.showMessageDialog(null, "Name of employee is:  "+LElist.get(LElist.size()-1).fName);
-                JOptionPane.showMessageDialog(null, "Name of employee is:  "+LElist.get(LElist.size()-1).getLEmployeePassword());
-                stage.close();
-                LoaderClass.ManagerLibraryPage();
+        String leUserName = username.getText();  //unique ok
+        String lePassword = password.getText();  //unique ok
+        int n = 0;
+
+        for (int i = 0; i < LElist.size(); i++) {
+            if (leNationalCode.equals(LElist.get(i).getNationalCode()) || lePassword.equals(LElist.get(i).getLEmployeePassword()) || leUserName.equals(LElist.get(i).getLEmployeeUserName())) {
+                JOptionPane.showMessageDialog(null, "Not unique username,password or national code");
+                n = 1;
+            }
+        }
+
+        if (n == 0) {
+            LEmployee le = new LEmployee(leName, leLastname, leNationalCode, leAge, leGender, lePhoneNumber, leAddress, leUserName, lePassword);
+            LElist.add(le);
+            System.out.println("Name of employee is: " + LElist.get(LElist.size() - 1).getfName());
+            stage.close();
+            LoaderClass.ManagerLibraryPage();
+        }
     }
+
     @FXML
     public void Back(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.BackBTN.getScene().getWindow();
         stage.close();
         LoaderClass.ManagerLibraryPage();
     }
-    }
+}
