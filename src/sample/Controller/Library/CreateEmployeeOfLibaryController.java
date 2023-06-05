@@ -61,7 +61,7 @@ public class CreateEmployeeOfLibaryController {
         if (n == 0) {
             LEmployee le = new LEmployee(leName, leLastname, leNationalCode, leAge, leGender, lePhoneNumber, leAddress, leUserName, lePassword);
             LElist.add(le);
-            System.out.println("Name of employee is: " + LElist.get(LElist.size() - 1).getfName());
+            System.out.println("Name of employee is: " + LElist.get(LElist.size() - 1).getFirstName());
             stage.close();
             LoaderClass.ManagerLibraryPage();
         }

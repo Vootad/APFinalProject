@@ -23,7 +23,7 @@ public class LViewEmployeesController implements Initializable {
     @FXML
     private TableView<LEmployee> tableView;
     @FXML
-    private TableColumn<LEmployee,String> name;
+    private TableColumn<LEmployee,String> firstName;
     @FXML
     private TableColumn<LEmployee,String> lastName;
     @FXML
@@ -31,13 +31,13 @@ public class LViewEmployeesController implements Initializable {
     @FXML
      private Button btn_back;
     ObservableList<LEmployee> list = FXCollections.observableArrayList(
-
+            LElist
     );
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        name.setCellValueFactory(new PropertyValueFactory<LEmployee,String>("name"));
-        lastName.setCellValueFactory(new PropertyValueFactory<LEmployee,String>("Lastname"));
+        firstName.setCellValueFactory(new PropertyValueFactory<LEmployee,String>("firstName"));
+        lastName.setCellValueFactory(new PropertyValueFactory<LEmployee,String>("lastName"));
         age.setCellValueFactory(new PropertyValueFactory<LEmployee,String>("Age"));
         tableView.setItems(list);
     }
