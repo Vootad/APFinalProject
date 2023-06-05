@@ -7,7 +7,7 @@
    <children>
       <TableView fx:id="tableView" layoutX="-2.0" prefHeight="199.0" prefWidth="600.0">
         <columns>
-          <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="firstName" prefWidth="75.0" text="Name" />
           <TableColumn fx:id="lastName" prefWidth="75.0" text="Lastname" />
             <TableColumn fx:id="age" prefWidth="75.0" text="Age" />
         </columns>

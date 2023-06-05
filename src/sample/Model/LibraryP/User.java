@@ -3,17 +3,17 @@ package sample.Model.LibraryP;
 public  class User {
 
 
-    private String lName;
-    private String fName;
+    private String lastName;
+    private String firstName;
     private String nationalCode;
     private String age;
     public String gender;
     public String phoneNumber;
     public String address;
-    public User(String fName , String lName , String nationalCode , String age , String gender , String phoneNumber , String address){
+    public User(String firstName , String lastName , String nationalCode , String age , String gender , String phoneNumber , String address){
 
-        this.fName = fName;
-        this.lName = lName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.address = address;
         this.age = age;
         this.gender = gender;
@@ -21,19 +21,17 @@ public  class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getfName() {
-        return fName;
+    public String getFirstName() {
+        return firstName;
     }
-    public void setfName(String fName) {
-        this.fName = fName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-
-
-    public String getlName() {
-        return lName;
+    public String getLastName() {
+        return lastName;
     }
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setLastName(String lName) {
+        this.lastName = lName;
     }
 
     public String getAge() {
