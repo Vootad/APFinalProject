@@ -7,9 +7,9 @@ public  class User {
     private String firstName;
     private String nationalCode;
     private String age;
-    public String gender;
-    public String phoneNumber;
-    public String address;
+    private String gender;
+    private String phoneNumber;
+    private String address;
     public User(String firstName , String lastName , String nationalCode , String age , String gender , String phoneNumber , String address){
 
         this.firstName = firstName;
@@ -27,6 +27,7 @@ public  class User {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
     public String getLastName() {
         return lastName;
     }

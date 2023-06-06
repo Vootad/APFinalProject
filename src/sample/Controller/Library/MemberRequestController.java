@@ -53,8 +53,10 @@ public class MemberRequestController {
 //            String memberShip = membership.getText();
             MemberRequest memberRequest = new MemberRequest(memberName, memberLastname, memberNationalCode, memberAge, memberGender, memberPhoneNumber, memberAddress, memberUserName, memberPassword);
             memberRequests.add(memberRequest);
-            JOptionPane.showMessageDialog(null, "Done ");
+            System.out.println("request saved");
+//            JOptionPane.showMessageDialog(null, "Done ");
             stage.close();
+            LoaderClass.showLibraryPage();
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null, "Fill fields correctly ");

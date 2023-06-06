@@ -45,6 +45,6 @@ public class LViewEmployeesController implements Initializable {
     public void Back(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.btn_back.getScene().getWindow();
         stage.close();
-        LoaderClass.showLibraryPage();
+        LoaderClass.ManagerLibraryPage();
     }
 }

@@ -43,4 +43,13 @@ public class LibraryController {
         LoaderClass.CreateMembershipRequest();
     }
 
+
+    @FXML
+    public void goToLoginEmployee(javafx.event.ActionEvent event){
+
+        Stage stage = (Stage) this.createLibraryMemberAcc.getScene().getWindow(); //click on sign up button
+        stage.close();
+        LoaderClass.ShowLoginEmployee();
+    }
+
 }

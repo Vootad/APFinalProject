@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="501.0" prefWidth="428.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.ShowMemberShipRequestsController">
+    <children>
+        <TableView fx:id="tableView" layoutX="46.0" layoutY="45.0" prefHeight="383.0" prefWidth="336.0" style="-fx-background-color: #000000;">
+            <columns>
+                <TableColumn fx:id="fNameC" prefWidth="75.0" text="First name" />
+                <TableColumn fx:id="lNameC" prefWidth="77.5" text="Last name" />
+                <TableColumn fx:id="ageC" prefWidth="55.5" text="Age" />
+                <TableColumn fx:id="phoneNumberC" prefWidth="127.5" text="Phone number" />
+            </columns>
+        </TableView>
+        <Button fx:id="BackBtn" layoutX="362.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="back-&gt;" textFill="WHITE" />
+        <Button layoutX="106.0" layoutY="444.0" mnemonicParsing="false" text="Add member" />
+        <Button layoutX="245.0" layoutY="444.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Reject" />
+    </children>
+</AnchorPane>

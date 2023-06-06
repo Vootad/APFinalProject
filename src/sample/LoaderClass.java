@@ -149,7 +149,7 @@ public class LoaderClass {
         try {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/ManagerOfLibaryPage.fxml").toUri().toURL());
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/ManagerOfLibraryPage.fxml").toUri().toURL());
             stage1.setScene(new Scene(root));
             stage1.setResizable(false);
             stage1.show();
@@ -185,11 +185,56 @@ public class LoaderClass {
             System.out.println("Exception");
         }
     }
+
     public static void CreateMembershipRequest(){
         try {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/MembershipRequest.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+
+
+    public static void ShowMemberShipRequestsPage(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/ShowMembershipRequests.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+
+    public static void ShowLoginEmployee(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/LoginLEmployee.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+
+
+    public static void ShowLEmployeePage(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/LEmployeePage.fxml").toUri().toURL());
             stage1.setScene(new Scene(root));
             stage1.setResizable(false);
             stage1.show();
