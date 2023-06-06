@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="491.0" prefWidth="408.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.ViewBooksController">
+    <children>
+        <TableView fx:id="tableView" layoutX="27.0" layoutY="51.0" prefHeight="412.0" prefWidth="354.0" style="-fx-background-color: #000000;">
+            <columns>
+                <TableColumn fx:id="bookName" prefWidth="113.0" text="Bookname" />
+                <TableColumn fx:id="bookSubject" prefWidth="121.0" text="Booksubject" />
+                <TableColumn fx:id="bookPrice" prefWidth="119.0" text="Bookprice" />
+            </columns>
+        </TableView>
+        <Button fx:id="BackBtn" layoutX="353.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="WHITE" />
+    </children>
+</AnchorPane>

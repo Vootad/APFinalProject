@@ -1,6 +1,7 @@
 package sample;
 
 import sample.Model.*;
+import sample.Model.LibraryP.Book;
 import sample.Model.LibraryP.LEmployee;
 import sample.Model.LibraryP.MemberRequest;
 
@@ -16,9 +17,8 @@ public class AL {
     public static ArrayList<Hospital> HospitalList = new ArrayList<Hospital>();
     public static ArrayList<Airport> AirportList = new ArrayList<Airport>();
     public static ArrayList<University> UniversityList = new ArrayList<University>();
-
-
     public static ArrayList<Library> LibraryList = new ArrayList<Library>();
     public static ArrayList<LEmployee>LElist = new ArrayList<>();
     public static ArrayList<MemberRequest>memberRequests = new ArrayList<>();
+    public static ArrayList<Book> books = new ArrayList<>();
 }
