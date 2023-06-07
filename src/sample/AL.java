@@ -20,5 +20,5 @@ public class AL {
     public static ArrayList<Library> LibraryList = new ArrayList<Library>();
     public static ArrayList<LEmployee>LElist = new ArrayList<>();
     public static ArrayList<MemberRequest>memberRequests = new ArrayList<>();
-    public static ArrayList<Book> books = new ArrayList<>();
+    public static ArrayList<Book> booksList = new ArrayList<>();
 }

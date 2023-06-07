@@ -16,7 +16,7 @@ import sample.Model.LibraryP.MemberRequest;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static sample.AL.books;
+import static sample.AL.booksList;
 import static sample.AL.memberRequests;
 
 public class ViewBooksController implements Initializable {
@@ -33,7 +33,7 @@ public class ViewBooksController implements Initializable {
 
 
     ObservableList<Book> list = FXCollections.observableArrayList(
-            books
+            booksList
     );
 
     @Override
@@ -49,6 +49,6 @@ public class ViewBooksController implements Initializable {
     public void Back(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.BackBtn.getScene().getWindow();
         stage.close();
-        LoaderClass.ManagerLibraryPage();
+        LoaderClass.CreateEmployeeOfLibraryPage();
     }
 }

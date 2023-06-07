@@ -40,5 +40,11 @@ public class LEmployeePageController {
         stage.close();
         LoaderClass.CreateBookPage();
     }
+    @FXML
+    public void goToBooksList(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.BooksListBtn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ViewBooksPage();
+    }
 
 }

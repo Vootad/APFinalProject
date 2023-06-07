@@ -6,15 +6,18 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sample.LoaderClass;
 import sample.Model.LibraryP.Book;
+import sample.Model.LibraryP.LEmployee;
 
-import static sample.AL.books;
+import javax.swing.*;
+
+import static sample.AL.LElist;
+import static sample.AL.booksList;
 
 public class CreateBookController {
-    private Boolean condition = true;
     @FXML
     private TextField Bookname;
     @FXML
-    private TextField Bookid;
+    private TextField Bookid; //unique
     @FXML
     private TextField BookSubject;
     @FXML
@@ -22,20 +25,35 @@ public class CreateBookController {
     @FXML
     private Button BackBTN;
     @FXML
-    private Button CreateBook;;
+    private Button CreateBook;
     @FXML
     public void CreateBook(javafx.event.ActionEvent event){
-        Stage stage = (Stage) this.CreateBook.getScene().getWindow();
-        String bName = Bookname.getText();
-        String bId = Bookid.getText();
-        String bSubject = BookSubject.getText();
-        long bPrice = Long.parseLong(BookPrice.getText());
-        Book book = new Book(bName,bId,bSubject,bPrice,condition);
-        books.add(book);
-        System.out.println(books.get(books.size()-1));
-        stage.close();
-        LoaderClass.ShowLEmployeePage();
+        try{
+            Stage stage = (Stage) this.CreateBook.getScene().getWindow();
+            String bName = Bookname.getText();
+            String bId = Bookid.getText();
+            String bSubject = BookSubject.getText();
+            double bPrice = Double.parseDouble(BookPrice.getText());/////////////
+            int n = 0;
 
+            for (int i = 0; i < booksList.size(); i++) {
+                if (bId.equals(booksList.get(i).getBookId())) {
+                    JOptionPane.showMessageDialog(null, "Not unique book ID");
+                    n = 1;
+                }
+            }
+
+            if (n == 0) {
+                Book book = new Book(bName,bId,bSubject,bPrice,true);
+                booksList.add(book);
+                System.out.println("Book name is: " + booksList.get(booksList.size()-1).getBookName());
+                stage.close();
+                LoaderClass.CreateEmployeeOfLibraryPage();
+            }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Fill all fields correctly");
+        }
     }
     @FXML
     public void Back(javafx.event.ActionEvent event){
