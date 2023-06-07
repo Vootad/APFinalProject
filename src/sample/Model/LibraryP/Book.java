@@ -4,11 +4,11 @@ public class Book {
     private String bookName;
     private String bookId;  //unique
     private String bookSubject;
-    private String bookPrice;
+    private double bookPrice;
     private Boolean bookCondition; //1:available  0:unavailable
 
 
-    public Book(String bookName , String bookId , String bookSubject , String bookPrice , Boolean bookCondition){
+    public Book(String bookName , String bookId , String bookSubject , double bookPrice , Boolean bookCondition){
         this.bookName = bookName;
         this.bookId = bookId;
         this.bookSubject = bookSubject;
@@ -26,8 +26,8 @@ public class Book {
     public String getBookSubject() {return bookSubject;}
     public void setBookSubject(String bookSubject) {this.bookSubject = bookSubject;}
 
-    public String getBookPrice() {return bookPrice;}
-    public void setBookPrice(String bookPrice) {this.bookPrice = bookPrice;}
+    public double getBookPrice() {return bookPrice;}
+    public void setBookPrice(double bookPrice) {this.bookPrice = bookPrice;}
 
     public Boolean getBookCondition() {return bookCondition;}
     public void setBookCondition(Boolean bookCondition) {this.bookCondition = bookCondition;}

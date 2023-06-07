@@ -13,7 +13,7 @@ public class ManagerPageController {
     @FXML
     private Button MembersListBtn;
     @FXML
-    private Button AuthorsListBtn;
+    private Button AuthorsList_Btn;
     @FXML
     private Button PublishersListBtn;
     @FXML
@@ -49,6 +49,12 @@ public class ManagerPageController {
         Stage stage = (Stage) this.memberShipRequestBtn.getScene().getWindow();
         stage.close();
         LoaderClass.ShowMemberShipRequestsPage();
+    }
+    @FXML
+    public void gotoViewBooks(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.AuthorsList_Btn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ViewBooksPage();
     }
 
 }
