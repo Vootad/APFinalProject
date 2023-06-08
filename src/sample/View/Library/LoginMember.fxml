@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="399.0" style="-fx-background-color: #0c2461; -fx-border-color: #000000; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.LoginLEmployeeController">
+    <children>
+        <Button fx:id="lEmployeeLoginBTN" layoutX="153.0" layoutY="409.0" mnemonicParsing="false" onAction="#goToLEmployeeAccount" prefHeight="42.0" prefWidth="113.0" style="-fx-background-radius: 15; -fx-border-color: #6a89cc; -fx-border-radius: 15; -fx-border-width: 4; -fx-background-color: #7efff5; -fx-border-insets: -2;" text="Login" AnchorPane.leftAnchor="153.0" AnchorPane.rightAnchor="153.0">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font></Button>
+        <TextField fx:id="lEmployeeLoginUsername" layoutX="96.0" layoutY="267.0" prefHeight="40.0" prefWidth="357.0" promptText="Enter username" style="-fx-border-color: #4a69bd; -fx-border-width: 3; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="96.0" />
+        <PasswordField fx:id="lEmployeeLoginPassword" layoutX="95.0" layoutY="343.0" prefHeight="40.0" prefWidth="219.0" promptText="Enter password" style="-fx-border-color: #4a69bd; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 3;" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="96.0" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="39.0" prefHeight="26.0" prefWidth="380.0" text="Login to library member account" textAlignment="CENTER" textFill="#a1dced" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="19.0">
+            <font>
+                <Font name="Franklin Gothic Demi" size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="108.0" layoutY="234.0" text="Username" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="108.0" layoutY="313.0" prefHeight="30.0" prefWidth="100.0" text="Password" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="149.0" fitWidth="137.0" layoutX="136.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="141.64948272705078">
+            <image>
+                <Image url="@../../../../loginLogo.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="backBTN" layoutX="333.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #0c2461;" text="back-&gt;" textFill="WHITE" />
+    </children>
+</AnchorPane>

@@ -30,7 +30,7 @@
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="MemberShipRequestsBtn" mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="Membership requests">
+                <Button fx:id="MemberShipRequestsBtn" mnemonicParsing="false" onAction="#memberShipRequest" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="Membership requests">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
