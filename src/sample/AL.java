@@ -1,10 +1,7 @@
 package sample;
 
 import sample.Model.*;
-import sample.Model.LibraryP.Book;
-import sample.Model.LibraryP.LEmployee;
-import sample.Model.LibraryP.LMember;
-import sample.Model.LibraryP.MemberRequest;
+import sample.Model.LibraryP.*;
 
 import java.util.ArrayList;
 
@@ -19,10 +16,10 @@ public class AL {
     public static ArrayList<Airport> AirportList = new ArrayList<Airport>();
     public static ArrayList<University> UniversityList = new ArrayList<University>();
 
-
     public static ArrayList<Library> LibraryList = new ArrayList<Library>();
     public static ArrayList<LEmployee>LElist = new ArrayList<>();
     public static ArrayList<MemberRequest>memberRequests = new ArrayList<>();
     public static ArrayList<Book> booksList = new ArrayList<>();
     public static ArrayList<LMember> lMembersList = new ArrayList<>();
+    public static ArrayList<BookDonate> bookDonateList = new ArrayList<>();
 }
