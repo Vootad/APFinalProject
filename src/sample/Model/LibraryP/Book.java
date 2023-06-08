@@ -11,13 +11,13 @@ public class Book extends Publisher{
 
 
 
-    public Book(String bookName , String bookId , String bookSubject , double bookPrice , Boolean bookCondition , Publisher publisher){
+    public Book(String bookName , String bookId , String bookSubject , double bookPrice , Boolean bookCondition){ //, Publisher publisher){
         this.bookName = bookName;
         this.bookId = bookId;
         this.bookSubject = bookSubject;
         this.bookPrice = bookPrice;
         this.bookCondition = bookCondition;
-        this.publisher = publisher;
+//        this.publisher = publisher;
     }
 
 // نام مدرک کتل منتشر شده

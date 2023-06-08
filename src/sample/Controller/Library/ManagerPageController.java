@@ -47,14 +47,22 @@ public class ManagerPageController {
     public void memberShipRequest(javafx.event.ActionEvent event){
 
         Stage stage = (Stage) this.memberShipRequestBtn.getScene().getWindow();
-        stage.close();
+//        stage.close();
         LoaderClass.ShowMemberShipRequestsPage();
     }
+
+//    @FXML
+//    public void gotoViewBooks(javafx.event.ActionEvent event){
+//        Stage stage = (Stage) this.booksList_Btn.getScene().getWindow();
+//        stage.close();
+//        LoaderClass.ViewBooksPage();
+//    }
+
     @FXML
-    public void gotoViewBooks(javafx.event.ActionEvent event){
-        Stage stage = (Stage) this.AuthorsList_Btn.getScene().getWindow();
-        stage.close();
-        LoaderClass.ViewBooksPage();
+    public void gotoViewMembersList(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.MembersListBtn.getScene().getWindow();
+//        stage.close();
+        LoaderClass.ViewMembersListPage();
     }
 
 }

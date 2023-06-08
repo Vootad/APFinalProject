@@ -12,10 +12,10 @@ import sample.LoaderClass;
 import sample.Model.LibraryP.LEmployee;
 import sample.Model.LibraryP.MemberRequest;
 
+import javax.swing.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import static sample.AL.memberRequests;
-
 public class ShowMemberShipRequestsController implements Initializable {
         @FXML
         private TableView<MemberRequest> tableView;
@@ -29,6 +29,8 @@ public class ShowMemberShipRequestsController implements Initializable {
         private TableColumn<MemberRequest, String> phoneNumberC;
         @FXML
         private Button BackBtn;
+        @FXML
+        private Button rejectBtn;
 
 
         ObservableList<MemberRequest> list = FXCollections.observableArrayList(
@@ -46,10 +48,31 @@ public class ShowMemberShipRequestsController implements Initializable {
 
 
         @FXML
+        public void deleteROW(javafx.event.ActionEvent event){
+                Stage stage = (Stage) this.rejectBtn.getScene().getWindow();
+                deleteRow();
+        }
+        public void deleteRow(){
+                try{
+                        ObservableList<MemberRequest> memberRequestSelected, allMemberRequests;
+                        allMemberRequests = tableView.getItems();
+                        memberRequestSelected = tableView.getSelectionModel().getSelectedItems();
+                        memberRequestSelected.forEach(allMemberRequests::remove);
+
+                        int rejectedIndex = tableView.getSelectionModel().getSelectedIndex();
+                        memberRequests.remove(rejectedIndex);
+                        System.out.println(memberRequests.size());
+                }
+               catch(Exception e){
+                       JOptionPane.showMessageDialog(null, "Select a row");
+               }
+        }
+
+        @FXML
         public void Back(javafx.event.ActionEvent event){
                 Stage stage = (Stage) this.BackBtn.getScene().getWindow();
                 stage.close();
-                LoaderClass.ManagerLibraryPage();
+//                LoaderClass.ManagerLibraryPage();
         }
 
     }

@@ -47,4 +47,18 @@ public class LEmployeePageController {
         LoaderClass.ViewBooksPage();
     }
 
+    @FXML
+    public void memberShipRequest(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.MemberShipRequestsBtn.getScene().getWindow();
+//        stage.close();
+        LoaderClass.ShowMemberShipRequestsPage();
+    }
+
+    @FXML
+    public void gotoViewMembersList(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.MembersListBtn.getScene().getWindow();
+//        stage.close();
+        LoaderClass.ViewMembersListPage();
+    }
+
 }
