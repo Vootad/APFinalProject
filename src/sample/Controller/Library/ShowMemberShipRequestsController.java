@@ -77,6 +77,7 @@ public class ShowMemberShipRequestsController implements Initializable {
                        JOptionPane.showMessageDialog(null, "Select a row");
                }
         }
+
         @FXML
         public void addMember(javafx.event.ActionEvent event){
                 Stage stage = (Stage) this.acceptMember.getScene().getWindow();
@@ -98,15 +99,28 @@ public class ShowMemberShipRequestsController implements Initializable {
                         String memberUserName = memberRequests.get(acceptedIndex).getUserName();
                         String memberPassword = memberRequests.get(acceptedIndex).getPassword();
                         ArrayList<Book> memberBooks = new ArrayList<Book>();
-                        LMember newMember = new LMember(memberName,memberLastName,memberNationalCode,memberAge,memberGender,memberPhoneNumber,memberAddress,memberUserName,memberPassword,setMemberId,memberBooks);
-                        lMembersList.add(newMember);
-                        System.out.println("The name of new member is: "+lMembersList.get(lMembersList.size()-1).getFirstName());
-                        memberRequestSelected.forEach(allMemberRequests::remove);
-                        memberRequests.remove(acceptedIndex);
 
+                        if(setMemberId.equals("")) {
+                                JOptionPane.showMessageDialog(null , "Fill MemberShip ID field");
+                        }
+                        else{
+                                boolean x = true;
+                                for(int i=0; i<lMembersList.size(); i++){
+                                    if(lMembersList.get(i).getMemberShipCode().equals(setMemberId)){
+                                        JOptionPane.showMessageDialog(null , "Membership code must be unique");
+                                        x = false;
+                                    }
+                                }
 
-
-
+                                if(x) {
+                                     LMember newMember = new LMember(memberName, memberLastName, memberNationalCode, memberAge, memberGender, memberPhoneNumber, memberAddress, memberUserName, memberPassword, setMemberId, memberBooks);
+                                     lMembersList.add(newMember);
+                                     System.out.println("The name of new member is: " + lMembersList.get(lMembersList.size() - 1).getFirstName());
+                                     System.out.println("The id of new member is: " + lMembersList.get(lMembersList.size() - 1).getMemberShipCode());
+                                     memberRequestSelected.forEach(allMemberRequests::remove);
+                                     memberRequests.remove(acceptedIndex);
+                                }
+                        }
 
                 }
                 catch (Exception e){

@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="641.0" prefWidth="479.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.BookDonationController">
+<AnchorPane prefHeight="601.0" prefWidth="345.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.BookDonationController">
 
     <children>
         <Label alignment="CENTER" layoutX="131.0" layoutY="5.0" prefHeight="43.0" prefWidth="232.0" text="Donate Book" textFill="WHITE">
@@ -50,7 +50,7 @@
                 <TextField fx:id="BookPrice" promptText="Book price" style="-fx-background-radius: 10;" />
             </children>
         </VBox>
-        <Button fx:id="donateBook" layoutX="200.0" layoutY="321.0" mnemonicParsing="false" onAction="#DonateBook" prefHeight="43.0" prefWidth="94.0" style="-fx-background-radius: 15; -fx-background-color: #c8d6e5; -fx-border-color: #01a3a4; -fx-border-radius: 15; -fx-border-width: 4; -fx-border-insets: -2;" text="Create" textAlignment="CENTER">
+        <Button fx:id="donateBook" layoutX="193.0" layoutY="470.0" mnemonicParsing="false" onAction="#DonateBook" prefHeight="43.0" prefWidth="94.0" style="-fx-background-radius: 15; -fx-background-color: #c8d6e5; -fx-border-color: #01a3a4; -fx-border-radius: 15; -fx-border-width: 4; -fx-border-insets: -2;" text="Create" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>

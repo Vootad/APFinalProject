@@ -52,4 +52,13 @@ public class LibraryController {
         LoaderClass.ShowLoginEmployee();
     }
 
+
+    @FXML
+    public void goToLoginMember(javafx.event.ActionEvent event){
+
+        Stage stage = (Stage) this.loginToLibraryMemberBTN.getScene().getWindow(); //click on sign up button
+        stage.close();
+        LoaderClass.ShowLMemberLoginPage();
+    }
+
 }

@@ -10,8 +10,7 @@ import sample.Model.LibraryP.MemberRequest;
 
 import javax.swing.*;
 
-import static sample.AL.LElist;
-import static sample.AL.memberRequests;
+import static sample.AL.*;
 
 public class MemberRequestController {
     @FXML
@@ -35,8 +34,6 @@ public class MemberRequestController {
     @FXML
     private TextField password;
     @FXML
-    private TextField membership;
-    @FXML
     private Button BTN;
     public void MemberShip(javafx.event.ActionEvent event){
         try {
@@ -50,16 +47,36 @@ public class MemberRequestController {
             String memberAddress = address.getText();
             String memberUserName = username.getText();
             String memberPassword = password.getText();
-//            String memberShip = membership.getText();
-            MemberRequest memberRequest = new MemberRequest(memberName, memberLastname, memberNationalCode, memberAge, memberGender, memberPhoneNumber, memberAddress, memberUserName, memberPassword);
-            memberRequests.add(memberRequest);
-            System.out.println("request saved");
-//            JOptionPane.showMessageDialog(null, "Done ");
-            stage.close();
-            LoaderClass.showLibraryPage();
+
+            boolean x = true;
+
+                for (int i = 0; i < memberRequests.size(); i++) {
+                    if (memberRequests.get(i).getUserName().equals(memberUserName) || memberRequests.get(i).getPassword().equals(memberPassword)) {
+                        x = false;
+                    }
+                    break;
+                }
+
+                for (int i = 0; i < lMembersList.size(); i++) {
+                    if (lMembersList.get(i).getUserName().equals(memberUserName) || lMembersList.get(i).getUserName().equals(memberPassword)) {
+                        x = false;
+                    }
+                }
+
+            if(x){
+                MemberRequest memberRequest = new MemberRequest(memberName, memberLastname, memberNationalCode, memberAge, memberGender, memberPhoneNumber, memberAddress, memberUserName, memberPassword);
+                memberRequests.add(memberRequest);
+                System.out.println("request saved");
+//                JOptionPane.showMessageDialog(null, "Done ");
+                stage.close();
+                LoaderClass.showLibraryPage();
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Not unique username or password");
+            }
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Fill fields correctly ");
+            JOptionPane.showMessageDialog(null, "Fill all fields correctly ");
 
         }
     }
@@ -68,6 +85,6 @@ public class MemberRequestController {
     public void Back(javafx.event.ActionEvent event) {
         Stage stage = (Stage) this.BackBTN.getScene().getWindow();
         stage.close();
-        LoaderClass.createFirstPage();
+        LoaderClass.showLibraryPage();
     }
 }

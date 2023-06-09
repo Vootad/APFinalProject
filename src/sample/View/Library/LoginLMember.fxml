@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="399.0" style="-fx-background-color: #0c2461; -fx-border-color: #000000; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.LoginLEmployeeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="399.0" style="-fx-background-color: #0c2461; -fx-border-color: #000000; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.LoginLMemberController">
     <children>
-        <Button fx:id="lEmployeeLoginBTN" layoutX="153.0" layoutY="409.0" mnemonicParsing="false" onAction="#goToLEmployeeAccount" prefHeight="42.0" prefWidth="113.0" style="-fx-background-radius: 15; -fx-border-color: #6a89cc; -fx-border-radius: 15; -fx-border-width: 4; -fx-background-color: #7efff5; -fx-border-insets: -2;" text="Login" AnchorPane.leftAnchor="153.0" AnchorPane.rightAnchor="153.0">
+        <Button fx:id="lMemberLogin" layoutX="153.0" layoutY="409.0" mnemonicParsing="false" onAction="#goToLEmployeeAccount" prefHeight="42.0" prefWidth="113.0" style="-fx-background-radius: 15; -fx-border-color: #6a89cc; -fx-border-radius: 15; -fx-border-width: 4; -fx-background-color: #7efff5; -fx-border-insets: -2;" text="Login" AnchorPane.leftAnchor="153.0" AnchorPane.rightAnchor="153.0">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font></Button>
-        <TextField fx:id="lEmployeeLoginUsername" layoutX="96.0" layoutY="267.0" prefHeight="40.0" prefWidth="357.0" promptText="Enter username" style="-fx-border-color: #4a69bd; -fx-border-width: 3; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="96.0" />
-        <PasswordField fx:id="lEmployeeLoginPassword" layoutX="95.0" layoutY="343.0" prefHeight="40.0" prefWidth="219.0" promptText="Enter password" style="-fx-border-color: #4a69bd; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 3;" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="96.0" />
+        <TextField fx:id="lMemberLoginUsername" layoutX="96.0" layoutY="267.0" prefHeight="40.0" prefWidth="357.0" promptText="Enter username" style="-fx-border-color: #4a69bd; -fx-border-width: 3; -fx-background-radius: 20; -fx-border-radius: 20;" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="96.0" />
+        <PasswordField fx:id="lMemberLoginPassword" layoutX="95.0" layoutY="343.0" prefHeight="40.0" prefWidth="219.0" promptText="Enter password" style="-fx-border-color: #4a69bd; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 3;" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="96.0" />
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="39.0" prefHeight="26.0" prefWidth="380.0" text="Login to library member account" textAlignment="CENTER" textFill="#a1dced" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="19.0">
             <font>
                 <Font name="Franklin Gothic Demi" size="23.0" />
