@@ -35,13 +35,13 @@ public class LoginLMemberController {
 
 
     @FXML
-    public void goToLEmployeeAccount(javafx.event.ActionEvent event){
+    public void goToMemberAccount(javafx.event.ActionEvent event){
         try {
             Stage stage = (Stage) this.lMemberLoginBTN.getScene().getWindow();
             String userName = lMemberLoginUsername.getText();
             String password = lMemberLoginPassword.getText();
             boolean x = false;
-//            public int memberIndex = -1;
+            // int memberIndex = -1;
             for(int i=0 ; i< lMembersList.size(); i++){
                 if(lMembersList.get(i).getUserName().equals(userName) && lMembersList.get(i).getPassword().equals(password)){
                     memberIndex = i;

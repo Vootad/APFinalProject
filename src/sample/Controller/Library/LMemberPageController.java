@@ -26,6 +26,11 @@ public class LMemberPageController {
         stage.close();
         LoaderClass.showLibraryPage();
     }
+    @FXML public void donatePage(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.donationBtn.getScene().getWindow();
+        stage.close();
+        LoaderClass.DonateBookPage();
+    }
 
 
 
