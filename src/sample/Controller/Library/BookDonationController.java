@@ -48,6 +48,7 @@ public class BookDonationController {
                 bookDonateList.add(donate);
                 System.out.println("Book name is: " + bookDonateList.get(bookDonateList.size()-1).getBookName());
                 stage.close();
+                LoaderClass.ShowLMemberPage();
 
             }
         }

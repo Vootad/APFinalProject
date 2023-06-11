@@ -53,6 +53,12 @@ public class LEmployeePageController {
 //        stage.close();
         LoaderClass.ShowMemberShipRequestsPage();
     }
+    @FXML
+    public void gotoDonationPage(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.DonationRequestBtn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ARBookPage();
+    }
 
     @FXML
     public void gotoViewMembersList(javafx.event.ActionEvent event){
