@@ -7,17 +7,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.Model.LibraryP.Book;
-import sample.Model.LibraryP.BookDonate;
-import sample.Model.LibraryP.LMember;
-import sample.Model.LibraryP.MemberRequest;
 
 import javax.swing.*;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import static sample.AL.*;

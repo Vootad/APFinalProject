@@ -21,9 +21,7 @@ public class LoginLMemberController {
     private Button lMemberLoginBTN;
     @FXML
     private Button backBTN;
-    public int memberIndex = -1;
-
-
+    public static int memberIndex = -1;
 
     @FXML
     public void back(javafx.event.ActionEvent event){
@@ -32,8 +30,6 @@ public class LoginLMemberController {
         LoaderClass.showLibraryPage();
     }
 
-
-
     @FXML
     public void goToMemberAccount(javafx.event.ActionEvent event){
         try {
@@ -41,7 +37,6 @@ public class LoginLMemberController {
             String userName = lMemberLoginUsername.getText();
             String password = lMemberLoginPassword.getText();
             boolean x = false;
-            // int memberIndex = -1;
             for(int i=0 ; i< lMembersList.size(); i++){
                 if(lMembersList.get(i).getUserName().equals(userName) && lMembersList.get(i).getPassword().equals(password)){
                     memberIndex = i;

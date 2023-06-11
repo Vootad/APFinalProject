@@ -21,5 +21,7 @@ public class AL {
     public static ArrayList<MemberRequest>memberRequests = new ArrayList<>();
     public static ArrayList<Book> booksList = new ArrayList<>();
     public static ArrayList<LMember> lMembersList = new ArrayList<>();
-    public static ArrayList<BookDonate> bookDonateList = new ArrayList<>();
+//    public static ArrayList<BookDonate> bookDonateList = new ArrayList<>();
+    public static ArrayList<DonationRequest> donationRequestList = new ArrayList<>();
+
 }

@@ -5,7 +5,7 @@ public class Publisher {
     private String publisherCountry;
     private String publisherName;
 
-    public Publisher(String publisherCode , String publisherCountry , String publisherName) {
+    public Publisher(String publisherName , String publisherCode , String publisherCountry) {
         this.publisherCode = publisherCode;
         this.publisherCountry = publisherCountry;
         this.publisherName = publisherName;

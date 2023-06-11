@@ -16,6 +16,8 @@ public class LMember extends User{
         this.memberBorrowedBooksList = Borrowed;
     }
 
+    public LMember(){}
+
 
     public String getUserName() {
         return userName;

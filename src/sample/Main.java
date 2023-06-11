@@ -24,12 +24,6 @@ public class Main extends Application {
         signupPage.show();
     }
     public static void main(String[] args) {
-
-//        ArrayList<Book> b = new ArrayList<Book>();
-//        LMember lm = new LMember( "1" , "1" , "1" , "1" , "1" , "1" , "1" , "1" , "1" , "1" , b );
-//        AL.lMembersList.add(lm);
-
-
         launch(args);
     }
 }

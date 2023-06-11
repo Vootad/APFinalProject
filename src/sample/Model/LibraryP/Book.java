@@ -1,26 +1,29 @@
 package sample.Model.LibraryP;
 
-public class Book extends Publisher{
+public class Book{
     private String bookName;
     private String bookId;  //unique
     private String bookSubject;
     private double bookPrice;
     private Boolean bookCondition; //1:available  0:unavailable
-    Publisher publisher = new Publisher();
+    private Publisher publisher = new Publisher();
+    private Author author = new Author();
 
 
 
 
-    public Book(String bookName , String bookId , String bookSubject , double bookPrice , Boolean bookCondition){ //, Publisher publisher){
+    public Book(String bookName , String bookId , String bookSubject , double bookPrice , Boolean bookCondition , Publisher publisher , Author author){
         this.bookName = bookName;
         this.bookId = bookId;
         this.bookSubject = bookSubject;
         this.bookPrice = bookPrice;
         this.bookCondition = bookCondition;
-//        this.publisher = publisher;
+        this.publisher = publisher;
+        this.author = author;
     }
 
-// نام مدرک کتل منتشر شده
+    public Book(){}
+
     public String getBookName() {return bookName;}
     public void setBookName(String bookName) {this.bookName = bookName;}
 
@@ -37,16 +40,10 @@ public class Book extends Publisher{
     public void setBookCondition(Boolean bookCondition) {this.bookCondition = bookCondition;}
 
 
+    public Publisher getPublisher() {return publisher;}
+    public void setPublisher(Publisher publisher) {this.publisher = publisher;}
 
-
-    public String getPublisherCode() {return publisher.getPublisherCode();}
-    public void setPublisherCode(String publisherCode) {this.publisher.setPublisherCode(publisherCode);}
-
-    public String getPublisherCountry() {return publisher.getPublisherCountry();}
-    public void setPublisherCountry(String publisherCountry) {this.publisher.setPublisherCountry(publisherCountry);}
-
-    public String getPublisherName() {return publisher.getPublisherName();}
-    public void setPublisherName(String publisherName) {this.publisher.setPublisherName(publisherName);}
-
+    public Author getAuthor() {return author;}
+    public void setAuthor(Author author) {this.author = author;}
 
 }
