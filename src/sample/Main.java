@@ -26,4 +26,6 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    //in accepting donation request part  repeat author and publisher not recognizable
+    // ,and they don't add to publisherList & authorsList
 }

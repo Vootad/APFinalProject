@@ -5,17 +5,16 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="601.0" prefWidth="345.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.BookDonationController">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="444.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.BookDonationController">
     <children>
-        <Label alignment="CENTER" layoutX="131.0" layoutY="5.0" prefHeight="43.0" prefWidth="232.0" text="Donate Book" textFill="WHITE">
+        <Label alignment="CENTER" layoutX="112.0" layoutY="18.0" prefHeight="43.0" prefWidth="193.0" text="Donate Book" textFill="WHITE" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="111.0">
             <font>
                 <Font name="Berlin Sans FB Demi Bold" size="30.0" />
             </font>
         </Label>
-        <Line endX="165.5" layoutX="214.0" layoutY="60.0" startX="-100.0" stroke="WHITE" style="-fx-stroke-width: 1.5;" />
-        <Button fx:id="BackBTN" layoutX="411.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
-        <VBox layoutX="58.0" layoutY="91.0" prefHeight="238.0" prefWidth="202.0" style="-fx-spacing: 8;">
+        <Line endX="165.5" layoutX="189.0" layoutY="61.0" startX="-100.0" stroke="WHITE" style="-fx-stroke-width: 1.5;" AnchorPane.leftAnchor="88.25" AnchorPane.rightAnchor="88.75" />
+        <Button fx:id="BackBTN" layoutX="376.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
+        <VBox layoutX="51.0" layoutY="84.0" prefHeight="396.0" prefWidth="184.0" style="-fx-spacing: 5;">
             <children>
                 <Label text="Book name:" textAlignment="CENTER" textFill="#bbecfa">
                     <font>
@@ -40,17 +39,58 @@
                         <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
                     </font>
                 </Label>
+                <Line endX="100.0" startX="-100.0" />
+                <Label text="Publisher name:" textFill="#bbecfa">
+                    <font>
+                        <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
+                    </font>
+                </Label>
+                <Line endX="100.0" startX="-100.0" />
+            <Label text="Publisher code:" textFill="#bbecfa">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" startX="-100.0" />
+            <Label text="Publisher country:" textFill="#bbecfa">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" startX="-100.0" />
+                <Label text="Auther name:" textFill="#bbecfa">
+                    <font>
+                        <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
+                    </font>
+                </Label>
+            <Line endX="100.0" startX="-100.0" />
+            <Label text="Author education:" textFill="#bbecfa">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
+               </font></Label>
+            <Line endX="100.0" startX="-100.0" />
+            <Label text="Donstion code:" textFill="#bbecfa">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="21.0" />
+               </font>
+            </Label>
             </children>
         </VBox>
-        <VBox layoutX="282.0" layoutY="91.0" prefHeight="400.0" prefWidth="156.0" style="-fx-spacing: 20;">
+        <VBox layoutX="248.0" layoutY="84.0" prefHeight="396.0" prefWidth="155.0" style="-fx-spacing: 15;">
             <children>
-                <TextField fx:id="Bookname" prefHeight="25.0" prefWidth="149.0" promptText="Book name" style="-fx-background-radius: 10;" />
-                <TextField fx:id="Bookid" promptText="Book Id" style="-fx-background-radius: 10;" />
-                <TextField fx:id="BookSubject" promptText="Book subject" style="-fx-background-radius: 10;" />
-                <TextField fx:id="BookPrice" promptText="Book price" style="-fx-background-radius: 10;" />
+                <TextField fx:id="Bookname" prefHeight="25.0" prefWidth="155.0" promptText="Book name" style="-fx-background-radius: 10;" />
+                <TextField fx:id="Bookid" prefHeight="25.0" prefWidth="155.0" promptText="Book Id" style="-fx-background-radius: 10;" />
+                <TextField fx:id="BookSubject" prefHeight="25.0" prefWidth="155.0" promptText="Book subject" style="-fx-background-radius: 10;" />
+                <TextField fx:id="BookPrice" prefHeight="25.0" prefWidth="155.0" promptText="Book price" style="-fx-background-radius: 10;" />
+                <TextField fx:id="bookPublisherName" prefHeight="25.0" prefWidth="155.0" promptText="Book publisher name" style="-fx-background-radius: 10;" />
+            <TextField fx:id="publisherCode" prefHeight="25.0" prefWidth="155.0" promptText="Book publisher code" style="-fx-background-radius: 10;" />
+            <TextField fx:id="publisherCountry" prefHeight="25.0" prefWidth="155.0" promptText="Book publisher country" style="-fx-background-radius: 10;" />
+                <TextField fx:id="bookAuthorName" prefHeight="25.0" prefWidth="155.0" promptText="Book author name" style="-fx-background-radius: 10;" />
+            <TextField fx:id="authorEducation" prefHeight="25.0" prefWidth="155.0" promptText="Book author education" style="-fx-background-radius: 10;" />
+            <TextField fx:id="donationCode" promptText="Donation code" style="-fx-background-radius: 10;" />
             </children>
         </VBox>
-        <Button fx:id="donateBook" layoutX="193.0" layoutY="470.0" mnemonicParsing="false" onAction="#DonateBook" prefHeight="43.0" prefWidth="94.0" style="-fx-background-radius: 15; -fx-background-color: #c8d6e5; -fx-border-color: #01a3a4; -fx-border-radius: 15; -fx-border-width: 4; -fx-border-insets: -2;" text="Create" textAlignment="CENTER">
+        <Button fx:id="donateBook" layoutX="176.0" layoutY="502.0" mnemonicParsing="false" onAction="#DonateBook" prefHeight="43.0" prefWidth="94.0" style="-fx-background-radius: 15; -fx-background-color: #c8d6e5; -fx-border-color: #01a3a4; -fx-border-radius: 15; -fx-border-width: 4; -fx-border-insets: -2;" text="Donate" textAlignment="CENTER">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>

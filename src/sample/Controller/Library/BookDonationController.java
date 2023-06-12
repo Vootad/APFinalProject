@@ -131,7 +131,6 @@ public class BookDonationController {
                     LMember member = lMembersList.get(x.memberIndex);
                     DonationRequest dR = new DonationRequest(book , member , DonationCode);
                     donationRequestList.add(dR);
-
                 }
 
 

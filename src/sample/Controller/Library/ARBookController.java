@@ -9,7 +9,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sample.LoaderClass;
+import sample.Model.LibraryP.Author;
 import sample.Model.LibraryP.Book;
+import sample.Model.LibraryP.DonationRequest;
+import sample.Model.LibraryP.Publisher;
 
 import javax.swing.*;
 import java.net.URL;
@@ -19,41 +23,38 @@ import static sample.AL.*;
 
 public class ARBookController implements Initializable {
     @FXML
-    private TableView<BookDonate> tableView;
+    private TableView<DonationRequest> tableView;
     @FXML
-    private TableColumn<BookDonate, String> bName;
+    private TableColumn<DonationRequest, String> bName;
     @FXML
-    private TableColumn<BookDonate, String> bId;
+    private TableColumn<DonationRequest, String> bId;
     @FXML
-    private TableColumn<BookDonate, String> bSubject;
+    private TableColumn<DonationRequest, String> bSubject;
     @FXML
-    private TableColumn<BookDonate, Double> bPrice;
+    private TableColumn<DonationRequest, String> memberName;
     @FXML
     private Button BackBtn;
     @FXML
     private Button rejectBtn;
     @FXML
     private Button acceptBook;
-
-
-
-    ObservableList<BookDonate> list = FXCollections.observableArrayList(
-            bookDonateList
+    ObservableList<DonationRequest> list = FXCollections.observableArrayList(
+            donationRequestList
     );
-    ObservableList<BookDonate> bookDonatesSelected, allBookDonates;
+    ObservableList<DonationRequest> bookDonatesSelected, allBookDonates;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        bName.setCellValueFactory(new PropertyValueFactory<BookDonate,String>("bookName"));
-        bId.setCellValueFactory(new PropertyValueFactory<BookDonate,String>("bookId"));
-        bSubject.setCellValueFactory(new PropertyValueFactory<BookDonate,String>("bookSubject"));
-        bPrice.setCellValueFactory(new PropertyValueFactory<BookDonate,Double>("bookPrice"));
+        bName.setCellValueFactory(new PropertyValueFactory<DonationRequest,String>("bookName"));
+        bId.setCellValueFactory(new PropertyValueFactory<DonationRequest,String>("bookId"));
+        bSubject.setCellValueFactory(new PropertyValueFactory<DonationRequest,String>("bookSubject"));
+        memberName.setCellValueFactory(new PropertyValueFactory<DonationRequest,String>("firstName"));
         tableView.setItems(list);
     }
 
 
     @FXML
-    public void deleteROW(javafx.event.ActionEvent event){
+    public void rejectBook(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.rejectBtn.getScene().getWindow();
         deleteRow();
     }
@@ -64,8 +65,8 @@ public class ARBookController implements Initializable {
             bookDonatesSelected.forEach(allBookDonates::remove);
 
             int rejectedIndex = tableView.getSelectionModel().getSelectedIndex();
-            bookDonateList.remove(rejectedIndex);
-            System.out.println(bookDonateList.size());
+            donationRequestList.remove(rejectedIndex);
+            System.out.println(donationRequestList.size());
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null, "Select a row");
@@ -82,18 +83,20 @@ public class ARBookController implements Initializable {
             allBookDonates = tableView.getItems();
             bookDonatesSelected = tableView.getSelectionModel().getSelectedItems();
             int acceptedIndex = tableView.getSelectionModel().getSelectedIndex();
-            String bookName = bookDonateList.get(acceptedIndex).getBookName();
-            String bookId = bookDonateList.get(acceptedIndex).getBookId();
-            String bookSubject = bookDonateList.get(acceptedIndex).getBookSubject();
-            double bookPrice = bookDonateList.get(acceptedIndex).getBookPrice();
+            String bookName = donationRequestList.get(acceptedIndex).getBook().getBookName();
+            String bookId = donationRequestList.get(acceptedIndex).getBook().getBookId();
+            String bookSubject = donationRequestList.get(acceptedIndex).getBook().getBookSubject();
+            double bookPrice = donationRequestList.get(acceptedIndex).getBook().getBookPrice();
+            Publisher publisher = donationRequestList.get(acceptedIndex).getBook().getPublisher();
+            Author author = donationRequestList.get(acceptedIndex).getBook().getAuthor();
 
 
-                Book newBook = new Book(bookName,bookId,bookSubject,bookPrice,true);
+                Book newBook = new Book(bookName,bookId,bookSubject,bookPrice,true,publisher,author);
                 booksList.add(newBook);
-                System.out.println("The name of new book is: " + booksList.get(booksList.size() - 1).getBookName());
-                System.out.println("The id of new book is: " + booksList.get(booksList.size() - 1).getBookId());
+                System.out.println("New book name: " + booksList.get(booksList.size() - 1).getBookName());
+                System.out.println("New book id: " + booksList.get(booksList.size() - 1).getBookId());
                 bookDonatesSelected.forEach(allBookDonates::remove);
-                bookDonateList.remove(acceptedIndex);
+                donationRequestList.remove(acceptedIndex);
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Select a row");
@@ -106,6 +109,6 @@ public class ARBookController implements Initializable {
     public void Back(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.BackBtn.getScene().getWindow();
         stage.close();
-//                LoaderClass.ManagerLibraryPage();
+        LoaderClass.ShowLEmployeePage();
     }
 }
