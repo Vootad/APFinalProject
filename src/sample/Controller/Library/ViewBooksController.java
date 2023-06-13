@@ -7,12 +7,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.LoaderClass;
 import sample.Model.LibraryP.Book;
 import sample.Model.LibraryP.MemberRequest;
 
+import javax.swing.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -29,7 +31,17 @@ public class ViewBooksController implements Initializable {
     @FXML
     private TableColumn<Book, Double> bookPrice;
     @FXML
+    private TextField newBookname;
+    @FXML
+    private TextField newBooksubject;
+    @FXML
+    private TextField newBookprice;
+    @FXML
+    private Button Edit_Btn;
+
+    @FXML
     private Button BackBtn;
+    ObservableList<Book> bookSelected,allBooks;
 
 
     ObservableList<Book> list = FXCollections.observableArrayList(
@@ -43,6 +55,30 @@ public class ViewBooksController implements Initializable {
         bookPrice.setCellValueFactory(new PropertyValueFactory<Book,Double>("bookPrice"));
         tableView.setItems(list);
     }
+    @FXML
+    public void editBook(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.Edit_Btn.getScene().getWindow();
+        editBook();
+
+    }
+    public void editBook(){
+        try{
+            ObservableList<Book>currentTableView = tableView.getItems();
+            allBooks = tableView.getItems();
+            bookSelected = tableView.getSelectionModel().getSelectedItems();
+            for(Book newBook : currentTableView){
+                newBook.setBookName(newBookname.getText());
+                newBook.setBookSubject(newBooksubject.getText());
+                newBook.setBookPrice(Double.parseDouble(newBookprice.getText()));
+                tableView.setItems(currentTableView);
+                tableView.refresh();
+                break;
+            }
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Select a row");
+        }
+    }
+
 
 
     @FXML

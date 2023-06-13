@@ -10,7 +10,10 @@ import java.awt.print.Book;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import static sample.AL.lMembersList;
+
 public class Main extends Application {
+  
     @Override
     public void start(Stage primaryStage) throws Exception{
 

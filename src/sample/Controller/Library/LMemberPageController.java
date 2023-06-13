@@ -31,6 +31,12 @@ public class LMemberPageController {
         stage.close();
         LoaderClass.DonateBookPage();
     }
+    @FXML
+    public void borrowPage(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.borrowedBookBtn.getScene().getWindow();
+        stage.close();
+        LoaderClass.BorrowBookPage();
+    }
 
 
 
