@@ -64,5 +64,18 @@ public class ManagerPageController {
 //        stage.close();
         LoaderClass.ViewMembersListPage();
     }
+    @FXML
+    public void gotoViewAuthorsPage(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.AuthorsList_Btn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ShowAuthorsList();
+    }
+    @FXML
+    public void gotoViewPublishersPage(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.PublishersListBtn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ShowPublishersList();
+    }
+
 
 }

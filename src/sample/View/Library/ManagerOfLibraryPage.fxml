@@ -22,11 +22,11 @@
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="AuthorsList_Btn" mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4; -fx-background-color: #c4b6e8;" text="List of authors">
+                <Button fx:id="AuthorsList_Btn" mnemonicParsing="false" onAction="#gotoViewAuthorsPage" prefHeight="45.0" prefWidth="240.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4; -fx-background-color: #c4b6e8;" text="List of authors">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="PublishersListBtn" mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="List of publishers">
+                <Button fx:id="PublishersListBtn" mnemonicParsing="false" onAction="#gotoViewPublishersPage" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="List of publishers">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
