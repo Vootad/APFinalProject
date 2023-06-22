@@ -16,6 +16,8 @@ public class LMemberPageController {
 
     @FXML
     private Button donationBtn;
+    @FXML
+    private Button Borrowlist_btn;
 
     @FXML
     private Button buyBookBtn;
@@ -30,6 +32,18 @@ public class LMemberPageController {
         Stage stage = (Stage) this.donationBtn.getScene().getWindow();
         stage.close();
         LoaderClass.DonateBookPage();
+    }
+    @FXML
+    public void borrowPage(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.borrowedBookBtn.getScene().getWindow();
+        stage.close();
+        LoaderClass.BorrowBookPage();
+    }
+    @FXML
+    public void borrowList(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.Borrowlist_btn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ViewBorrowedBooks();
     }
 
 

@@ -4,7 +4,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import sample.Model.LibraryP.LMember;
+
 import java.nio.file.Paths;
+
+import static sample.AL.lMembersList;
+
 public class LoaderClass {
 
     public static void UserMenuPage() {
@@ -331,6 +336,32 @@ public class LoaderClass {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/ARBooks.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+    public static void BorrowBookPage(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/BorrowBook.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+    public static void ViewBorrowedBooks(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/ViewBorrowList.fxml").toUri().toURL());
             stage1.setScene(new Scene(root));
             stage1.setResizable(false);
             stage1.show();

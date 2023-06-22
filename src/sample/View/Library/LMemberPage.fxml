@@ -8,13 +8,13 @@
 
     <children>
         <Button fx:id="BackBTN" layoutX="355.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" prefHeight="19.0" prefWidth="54.0" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
-        <VBox alignment="CENTER" layoutX="36.0" layoutY="82.0" prefHeight="413.0" prefWidth="351.0" style="-fx-spacing: 40; -fx-background-color: #0d0768; -fx-border-color: #000000; -fx-border-width: 5;" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0">
+        <VBox alignment="CENTER" layoutX="36.0" layoutY="82.0" prefHeight="442.0" prefWidth="351.0" style="-fx-spacing: 40; -fx-background-color: #0d0768; -fx-border-color: #000000; -fx-border-width: 5;" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0">
             <children>
                 <Button fx:id="searchBookBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-insets: -2; -fx-border-width: 4; -fx-border-radius: 30; -fx-background-color: #c4b6e8;" text="Search book ">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="borrowedBookBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="Borrowed books">
+                <Button fx:id="borrowedBookBtn" alignment="CENTER" mnemonicParsing="false" onAction="#borrowPage" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="Borrowed books">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
@@ -26,6 +26,10 @@
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
+            <Button fx:id="Borrowlist_btn" alignment="CENTER" mnemonicParsing="false" onAction="#borrowList" prefHeight="46.0" prefWidth="242.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="Borrow List">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="20.0" />
+               </font></Button>
             </children></VBox>
         <Label alignment="CENTER" layoutX="89.0" layoutY="14.0" prefHeight="50.0" prefWidth="246.0" text="Member account" textFill="#b4dee2" AnchorPane.leftAnchor="88.5" AnchorPane.rightAnchor="88.5">
             <font>
