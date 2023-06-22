@@ -30,6 +30,7 @@ public class BorrowBookController {
             if(bName.equals(booksList.get(i).getBookName())){
                 BorrowRequest borrowRequest = new BorrowRequest(booksList.get(i),lMembersList.get(memberIndex),bCode,false);
                 borrowRequestList.add(borrowRequest);
+                System.out.println(borrowRequestList.size());
                 stage.close();
                 LoaderClass.ShowLMemberPage();
             }

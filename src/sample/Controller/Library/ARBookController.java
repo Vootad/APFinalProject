@@ -74,7 +74,7 @@ public class ARBookController implements Initializable {
     }
 
     @FXML
-    public void addBook(javafx.event.ActionEvent event){
+    public void AddBook(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.acceptBook.getScene().getWindow();
         addBook();
     }

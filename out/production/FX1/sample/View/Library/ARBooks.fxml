@@ -5,24 +5,33 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="501.0" prefWidth="428.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.ARBookController">
-    <children>
-        <TableView fx:id="tableView" layoutX="21.0" layoutY="74.0" prefHeight="308.0" prefWidth="387.0" style="-fx-background-color: #000000;">
-            <columns>
-                <TableColumn fx:id="bName" prefWidth="97.0" text="Book name" />
-                <TableColumn fx:id="bId" prefWidth="78.5" text="Book ID" />
-                <TableColumn fx:id="bSubject" prefWidth="93.0" text="Book Subject" />
-            <TableColumn prefWidth="117.5" text="Member name" />
-            </columns>
-        </TableView>
-        <Button fx:id="BackBtn" layoutX="362.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="back-&gt;" textFill="WHITE" />
-        <Button fx:id="rejectBtn" layoutX="241.0" layoutY="410.0" mnemonicParsing="false" onAction="#rejectBook" prefHeight="32.0" prefWidth="86.0" style="-fx-background-radius: 10; -fx-border-color: #000000; -fx-border-insets: -2; -fx-border-width: 3; -fx-background-color: #a4a2d0;" text="Reject" />
-        <Button fx:id="acceptBook" layoutX="103.0" layoutY="410.0" mnemonicParsing="false" onAction="#addBook" prefHeight="32.0" prefWidth="86.0" style="-fx-background-radius: 10; -fx-border-color: #000000; -fx-border-width: 3; -fx-border-insets: -2; -fx-background-color: #a4a2d0;" text="Add book" />
-      <Label layoutX="75.0" layoutY="13.0" prefHeight="27.0" prefWidth="279.0" text="Book donation requests" textFill="#d4d0ff">
-         <font>
-            <Font name="Bodoni MT Black Italic" size="22.0" />
-         </font>
-      </Label>
-      <Line endX="229.5" layoutX="149.0" layoutY="49.0" startX="-100.0" stroke="WHITE" />
-    </children>
+<AnchorPane prefHeight="501.0" prefWidth="428.0" style="-fx-background-color: #0c2461;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller.Library.ARBookController">
+    <TableView fx:id="tableView" layoutX="21.0" layoutY="74.0" prefHeight="308.0" prefWidth="387.0"
+               style="-fx-background-color: #000000;">
+        <columns>
+            <TableColumn fx:id="bName" prefWidth="97.0" text="Book name"/>
+            <TableColumn fx:id="bId" prefWidth="78.5" text="Book ID"/>
+            <TableColumn fx:id="bSubject" prefWidth="93.0" text="Book Subject"/>
+        <TableColumn prefWidth="117.5" text="Member name"/>
+        </columns>
+    </TableView>
+    <Button fx:id="BackBtn" layoutX="362.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back"
+            style="-fx-background-color: #0c2461;" text="back-&gt;" textFill="WHITE"/>
+    <Button fx:id="rejectBtn" layoutX="241.0" layoutY="410.0" mnemonicParsing="false" onAction="#rejectBook"
+            prefHeight="32.0" prefWidth="86.0"
+            style="-fx-background-radius: 10; -fx-border-color: #000000; -fx-border-insets: -2; -fx-border-width: 3; -fx-background-color: #a4a2d0;"
+            text="Reject"/>
+    <Button fx:id="acceptBook" layoutX="103.0" layoutY="410.0" mnemonicParsing="false" onAction="#AddBook"
+            prefHeight="32.0" prefWidth="86.0"
+            style="-fx-background-radius: 10; -fx-border-color: #000000; -fx-border-width: 3; -fx-border-insets: -2; -fx-background-color: #a4a2d0;"
+            text="Add book"/>
+    <Label layoutX="75.0" layoutY="13.0" prefHeight="27.0" prefWidth="279.0" text="Book donation requests"
+           textFill="#d4d0ff">
+        <font>
+          <Font name="Bodoni MT Black Italic" size="22.0"/>
+        </font>
+    </Label>
+    <Line endX="229.5" layoutX="149.0" layoutY="49.0" startX="-100.0" stroke="WHITE"/>
 </AnchorPane>

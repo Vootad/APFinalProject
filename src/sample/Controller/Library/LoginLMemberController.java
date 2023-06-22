@@ -21,7 +21,7 @@ public class LoginLMemberController {
     private Button lMemberLoginBTN;
     @FXML
     private Button backBTN;
-    public static int memberIndex = -1;
+    public static int memberIndex;
 
     @FXML
     public void back(javafx.event.ActionEvent event){
@@ -36,7 +36,7 @@ public class LoginLMemberController {
             Stage stage = (Stage) this.lMemberLoginBTN.getScene().getWindow();
             String userName = lMemberLoginUsername.getText();
             String password = lMemberLoginPassword.getText();
-            boolean x = false;
+            memberIndex = -1;
             for(int i=0 ; i< lMembersList.size(); i++){
                 if(lMembersList.get(i).getUserName().equals(userName) && lMembersList.get(i).getPassword().equals(password)){
                     memberIndex = i;

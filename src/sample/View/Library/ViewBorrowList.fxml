@@ -3,15 +3,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="491.0" prefWidth="408.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.ViewBorrowListController">
-    <children>
-        <TableView fx:id="tableView" layoutX="86.0" layoutY="55.0" prefHeight="204.0" prefWidth="236.0" style="-fx-background-color: #000000;">
-            <columns>
-                <TableColumn fx:id="bookName" prefWidth="113.0" text="Bookname" />
-                <TableColumn fx:id="borrowCode" prefWidth="121.0" text="Borrowcode" />
-            </columns>
-        </TableView>
-        <Button fx:id="BackBtn" layoutX="353.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="WHITE" />
-        <Button fx:id="Delete_Btn" layoutX="79.0" layoutY="330.0" mnemonicParsing="false" onAction="#deleteFromBorrowList" prefHeight="26.0" prefWidth="248.0" text="Delete" />
-    </children>
+<AnchorPane prefHeight="491.0" prefWidth="408.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<!--    <children>-->
+<!--        <TableView fx:id="tableView" layoutX="86.0" layoutY="55.0" prefHeight="204.0" prefWidth="236.0" style="-fx-background-color: #000000;">-->
+<!--            <columns>-->
+<!--                <TableColumn fx:id="bookName" prefWidth="113.0" text="Bookname" />-->
+<!--                <TableColumn fx:id="borrowCode" prefWidth="121.0" text="Borrowcode" />-->
+<!--            </columns>-->
+<!--        </TableView>-->
+<!--        <Button fx:id="BackBtn" layoutX="353.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="WHITE" />-->
+<!--        <Button fx:id="Delete_Btn" layoutX="79.0" layoutY="330.0" mnemonicParsing="false" onAction="#deleteFromBorrowList" prefHeight="26.0" prefWidth="248.0" text="Delete" />-->
+<!--    </children>-->
 </AnchorPane>
+<!---->

@@ -43,7 +43,7 @@ public class LMemberPageController {
     public void borrowList(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.Borrowlist_btn.getScene().getWindow();
         stage.close();
-        LoaderClass.ViewBorrowedBooks();
+        LoaderClass.ShowBorrowRequests();
     }
 
 

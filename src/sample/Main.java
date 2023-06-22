@@ -4,13 +4,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import sample.Model.LibraryP.LMember;
+import sample.Model.LibraryP.*;
 
-import java.awt.print.Book;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-import static sample.AL.lMembersList;
+import static sample.AL.*;
 
 public class Main extends Application {
   
@@ -27,9 +26,18 @@ public class Main extends Application {
         signupPage.show();
     }
     public static void main(String[] args) {
-        LMember detaultMember = new LMember("ss","dd","ee","qq","male","ww","ere","babak","2","22",null);
+        /////////////////////////////////////////////////////////////////////
+        LMember detaultMember = new LMember("ss","dd","ee","qq","male","ww","ere","","","22",null);
         lMembersList.add(detaultMember);
+
+        LEmployee detaultEmployee = new LEmployee("ss","dd","ee","qq","male","ww","ere","","");
+        LElist.add(detaultEmployee);
+
+        Book b = new Book("a" , "a" , "a" , 123 , true , new Publisher() , new Author());
+        booksList.add(b);
+        ////////////////////////////////////////////////////////////////////////
         launch(args);
+
     }
     //in accepting donation request part  repeat author and publisher not recognizable
     // ,and they don't add to publisherList & authorsList

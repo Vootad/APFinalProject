@@ -66,5 +66,11 @@ public class LEmployeePageController {
 //        stage.close();
         LoaderClass.ViewMembersListPage();
     }
+    @FXML
+    public void goToBorrowReq(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.BorrowRequestsBtn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ShowBorrowRequests();
+    }
 
 }
