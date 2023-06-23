@@ -8,7 +8,7 @@
 
     <children>
         <Button fx:id="BackBTN" layoutX="355.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" prefHeight="19.0" prefWidth="54.0" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="#dedeff" />
-        <VBox alignment="CENTER" layoutX="36.0" layoutY="82.0" prefHeight="413.0" prefWidth="351.0" style="-fx-spacing: 20; -fx-background-color: #0d0768;" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0">
+        <VBox alignment="CENTER" layoutX="36.0" layoutY="82.0" prefHeight="467.0" prefWidth="351.0" style="-fx-spacing: 20; -fx-background-color: #0d0768;" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0">
             <children>
                 <Button fx:id="AddBookBtn" mnemonicParsing="false" onAction="#gotoCreateBook" prefHeight="45.0" prefWidth="240.0" style="-fx-background-radius: 30; -fx-border-color: #11a3a0; -fx-border-width: 4; -fx-border-radius: 30; -fx-border-insets: -2; -fx-background-color: #c4b6e8;" text="Add new book">
                     <font>
@@ -34,6 +34,11 @@
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
+            <Button fx:id="buyRequestBTN" mnemonicParsing="false" onAction="#goToBuyReq" prefHeight="44.0" prefWidth="246.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="Buy Request">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="20.0" />
+               </font>
+            </Button>
             </children></VBox>
         <Label alignment="CENTER" layoutX="89.0" layoutY="14.0" prefHeight="50.0" prefWidth="246.0" text="Welcome Employee" textFill="#b4dee2">
             <font>

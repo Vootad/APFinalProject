@@ -99,6 +99,7 @@ public class ShowMemberShipRequestsController implements Initializable {
                         String memberUserName = memberRequests.get(acceptedIndex).getUserName();
                         String memberPassword = memberRequests.get(acceptedIndex).getPassword();
                         ArrayList<Book> memberBooks = new ArrayList<Book>();
+                        ArrayList<Book> memberBoughtBooks = new ArrayList<>();
 
                         if(setMemberId.equals("")) {
                                 JOptionPane.showMessageDialog(null , "Fill MemberShip ID field");
@@ -113,7 +114,7 @@ public class ShowMemberShipRequestsController implements Initializable {
                                 }
 
                                 if(x) {
-                                     LMember newMember = new LMember(memberName, memberLastName, memberNationalCode, memberAge, memberGender, memberPhoneNumber, memberAddress, memberUserName, memberPassword, setMemberId, memberBooks);
+                                     LMember newMember = new LMember(memberName, memberLastName, memberNationalCode, memberAge, memberGender, memberPhoneNumber, memberAddress, memberUserName, memberPassword, setMemberId, memberBooks,memberBoughtBooks);
                                      lMembersList.add(newMember);
                                      System.out.println("The name of new member is: " + lMembersList.get(lMembersList.size() - 1).getFirstName());
                                      System.out.println("The id of new member is: " + lMembersList.get(lMembersList.size() - 1).getMemberShipCode());

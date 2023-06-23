@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="501.0" prefWidth="428.0" style="-fx-background-color: #0c2461;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.Library.BuyBooksListController">
+    <children>
+        <TableView fx:id="tableView" layoutX="21.0" layoutY="74.0" prefHeight="308.0" prefWidth="387.0" style="-fx-background-color: #000000;">
+            <columns>
+                <TableColumn fx:id="bName" prefWidth="112.0" text="Book name" />
+                <TableColumn fx:id="bSubject" prefWidth="147.0" text="Book Subject" />
+                <TableColumn fx:id="memberName" prefWidth="123.5" text="Member name" />
+            </columns>
+        </TableView>
+        <Button fx:id="BackBtn" layoutX="362.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="back-&gt;" textFill="WHITE" />
+        <Button fx:id="rejectBtn" layoutX="241.0" layoutY="410.0" mnemonicParsing="false" onAction="#rejectBook" prefHeight="32.0" prefWidth="86.0" style="-fx-background-radius: 10; -fx-border-color: #000000; -fx-border-insets: -2; -fx-border-width: 3; -fx-background-color: #a4a2d0;" text="Reject">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button fx:id="acceptBook" layoutX="103.0" layoutY="410.0" mnemonicParsing="false" onAction="#addBook" prefHeight="32.0" prefWidth="86.0" style="-fx-background-radius: 10; -fx-border-color: #000000; -fx-border-width: 3; -fx-border-insets: -2; -fx-background-color: #a4a2d0;" text="Accept">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Label layoutX="95.0" layoutY="13.0" prefHeight="27.0" prefWidth="266.0" text="Buy book requests" textFill="#d4d0ff">
+            <font>
+                <Font name="Bodoni MT Black Italic" size="22.0" />
+            </font>
+        </Label>
+        <Line endX="229.5" layoutX="149.0" layoutY="49.0" startX="-100.0" stroke="WHITE" />
+    </children>
+</AnchorPane>

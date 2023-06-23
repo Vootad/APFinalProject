@@ -6,18 +6,27 @@ public class LMember extends User{
     private String password;  //unique
     private String memberShipCode; //unique
     private ArrayList<Book> memberBorrowedBooksList = new ArrayList<>();
+    private ArrayList<Book> memberBoughtBooksList = new ArrayList<>();
 
 
-    public LMember(String fName , String lName , String nationalCode , String age , String gender , String phoneNumber , String address , String username , String password , String memberShipCode , ArrayList<Book>Borrowed){
+    public LMember(String fName , String lName , String nationalCode , String age , String gender , String phoneNumber , String address , String username , String password , String memberShipCode , ArrayList<Book>Borrowed,ArrayList<Book>Bought){
         super(fName , lName , nationalCode , age , gender , phoneNumber , address);
         this.userName = username;
         this.password = password;
         this.memberShipCode = memberShipCode;
         this.memberBorrowedBooksList = Borrowed;
+        this.memberBoughtBooksList = Bought;
     }
 
     public LMember(){}
 
+    public ArrayList<Book> getMemberBoughtBooksList() {
+        return memberBoughtBooksList;
+    }
+
+    public void setMemberBoughtBooksList(ArrayList<Book> memberBoughtBooksList) {
+        this.memberBoughtBooksList = memberBoughtBooksList;
+    }
 
     public String getUserName() {
         return userName;

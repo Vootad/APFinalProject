@@ -22,7 +22,7 @@
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>
-                <Button fx:id="buyBookBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="Buy book">
+                <Button fx:id="buyBookBtn" alignment="CENTER" mnemonicParsing="false" onAction="#gotoBuyRequestPage" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #c4b6e8; -fx-border-color: #11a3a0; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-insets: -2; -fx-border-width: 4;" text="Buy book">
                     <font>
                         <Font name="Berlin Sans FB Bold" size="20.0" />
                     </font></Button>

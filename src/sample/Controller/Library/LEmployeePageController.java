@@ -26,6 +26,8 @@ public class LEmployeePageController {
 
         @FXML
         private Button MemberShipRequestsBtn;
+        @FXML
+        private Button buyRequestBTN;
 
 
     @FXML
@@ -72,5 +74,12 @@ public class LEmployeePageController {
         stage.close();
         LoaderClass.ShowBorrowRequests();
     }
+    @FXML
+    public void goToBuyReq(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.buyRequestBTN.getScene().getWindow();
+        stage.close();
+        LoaderClass.ShowAcceptRejectBuyPage();
+    }
+
 
 }
