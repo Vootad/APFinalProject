@@ -64,6 +64,12 @@ public class LMemberPageController {
         stage.close();
         LoaderClass.ShowBooksList();
     }
+    @FXML
+    public void gotoBuyRequestPage(javafx.event.ActionEvent event){
+        Stage stage =  (Stage) this.buyBookBtn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ShowBuyPage();
+    }
 
 
 

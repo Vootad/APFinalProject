@@ -27,7 +27,7 @@ public class Main extends Application {
     }
     public static void main(String[] args) {
         /////////////////////////////////////////////////////////////////////
-        LMember detaultMember = new LMember("ss","dd","ee","qq","male","ww","ere","","","22",null);
+        LMember detaultMember = new LMember("ss","dd","ee","qq","male","ww","ere","","","22",null,null);
         lMembersList.add(detaultMember);
 
         LEmployee detaultEmployee = new LEmployee("ss","dd","ee","qq","male","ww","ere","","");

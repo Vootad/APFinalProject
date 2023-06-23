@@ -398,7 +398,7 @@ public class LoaderClass {
     }
 
 
-//    public static void ViewBorrowedBooks(){
+//   public static void ViewBorrowedBooks(){
 //        try {
 //            Stage stage1 = new Stage();
 //            FXMLLoader loader = new FXMLLoader();
@@ -430,6 +430,32 @@ public class LoaderClass {
             Stage stage1 = new Stage();
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/MemberBorrowedBooksList.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+    public static void ShowBuyPage(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/BuyBooks.fxml").toUri().toURL());
+            stage1.setScene(new Scene(root));
+            stage1.setResizable(false);
+            stage1.show();
+        }
+        catch (Exception e) {
+            System.out.println("Exception");
+        }
+    }
+    public static void ShowAcceptRejectBuyPage(){
+        try {
+            Stage stage1 = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/BuyRequestList.fxml").toUri().toURL());
             stage1.setScene(new Scene(root));
             stage1.setResizable(false);
             stage1.show();
