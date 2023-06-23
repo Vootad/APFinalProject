@@ -1,6 +1,8 @@
 package sample.Model.LibraryP;
 
-public class Book{
+import sample.IF;
+
+public class Book {//implements IF {
     private String bookName;
     private String bookId;  //unique
     private String bookSubject;
@@ -10,6 +12,15 @@ public class Book{
     private Author author = new Author();
 
 
+//    @Override
+//    public void objectToString(Book book){
+//        String id = book.getBookId();
+//        String name = book.getBookName();
+//        String subject = book.getBookSubject();
+//        Double price = book.getBookPrice();
+//        System.out.println("Book id is: " + id);
+//
+//    }
 
 
     public Book(String bookName , String bookId , String bookSubject , double bookPrice , Boolean bookCondition , Publisher publisher , Author author){

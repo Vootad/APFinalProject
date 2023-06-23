@@ -10,6 +10,10 @@ import sample.Model.LibraryP.MemberRequest;
 
 import javax.swing.*;
 
+import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import static sample.AL.*;
 
 public class MemberRequestController {
@@ -38,14 +42,33 @@ public class MemberRequestController {
     public void MemberShip(javafx.event.ActionEvent event){
         try {
             Stage stage = (Stage) this.BTN.getScene().getWindow();
+
             String memberName = FName.getText();
+
             String memberLastname = LName.getText();
+
             String memberNationalCode = nationalCode.getText();
+
             String memberAge = memberage.getText();
+
             String memberGender = gender.getText();
+            if(!memberGender.equals("Female") && !memberGender.equals("female") && !memberGender.equals("Male") && !memberGender.equals("male")){
+                throw new IOException("Incorrect phone number");
+            }
+
             String memberPhoneNumber = phoneNumber.getText();
+            String re = "09[0-3][0-9]-?[0-9]{3}-?[0-9]{4}";
+            Pattern pt = Pattern.compile(re);
+            Matcher mt = pt.matcher(memberPhoneNumber);
+            boolean result = mt.matches();
+            if(!result){
+                throw new IOException("Incorrect phone number");
+            }
+
             String memberAddress = address.getText();
+
             String memberUserName = username.getText();
+
             String memberPassword = password.getText();
 
             boolean x = true;
