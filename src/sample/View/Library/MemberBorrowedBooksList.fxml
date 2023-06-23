@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="491.0"
+            prefWidth="408.0"
+            style="-fx-background-color: #0c2461;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller.Library.MemberBorrowedBooksListController">
+    <children>
+        <TableView fx:id="tableView" layoutX="28.0" layoutY="83.0" prefHeight="309.0" prefWidth="354.0" style="-fx-background-color: #000000;">
+            <columns>
+                <TableColumn fx:id="bookName" prefWidth="113.0" text="Bookname" />
+                <TableColumn fx:id="bookSubject" prefWidth="121.0" text="Booksubject" />
+                <TableColumn fx:id="bookId" prefWidth="119.0" text="Book id" />
+            </columns>
+        </TableView>
+        <Button fx:id="BackBtn" layoutX="353.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #0c2461;" text="Back-&gt;" textFill="WHITE" />
+        <Button fx:id="returnBTN" layoutX="154.0" layoutY="421.0" mnemonicParsing="false" onAction="#returnBook" prefHeight="36.0" prefWidth="101.0" style="-fx-border-color: #000000; -fx-border-insets: -2; -fx-border-width: 3; -fx-border-radius: 10; -fx-background-radius: 10;" text="Return">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="27.0" prefHeight="36.0" prefWidth="265.0" text="List of borrowed books" textFill="#f2d9ff">
+            <font>
+                <Font name="AGA Arabesque Desktop" size="22.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

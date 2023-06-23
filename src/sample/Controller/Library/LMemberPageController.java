@@ -4,12 +4,25 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import sample.LoaderClass;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import sample.LoaderClass;
+import sample.Model.LibraryP.Book;
+
 public class LMemberPageController {
     @FXML
     private Button BackBTN;
 
     @FXML
-    private Button searchBookBtn;
+    private Button booksListBTN;
 
     @FXML
     private Button borrowedBookBtn;
@@ -43,7 +56,13 @@ public class LMemberPageController {
     public void borrowList(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.Borrowlist_btn.getScene().getWindow();
         stage.close();
-        LoaderClass.ShowBorrowRequests();
+        LoaderClass.ShowBorrowedList();
+    }
+    @FXML
+    public void listOfBooks(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.booksListBTN.getScene().getWindow();
+        stage.close();
+        LoaderClass.ShowBooksList();
     }
 
 
