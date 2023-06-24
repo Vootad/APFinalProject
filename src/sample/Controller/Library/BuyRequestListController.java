@@ -43,7 +43,7 @@ public class BuyRequestListController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         bName.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("bookName"));
         bSubject.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("bookSubject"));
-        memberName.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("firstName"));
+        memberName.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("fName"));
         tableView.setItems(list);
     }
 
@@ -102,4 +102,5 @@ public class BuyRequestListController implements Initializable {
             JOptionPane.showMessageDialog(null, "Select a row");
         }
     }
+    
 }
