@@ -1,6 +1,8 @@
 package sample.Model.LibraryP;
 
-public class LEmployee extends User{
+import sample.IF;
+
+public class LEmployee extends User implements IF<LEmployee> {
     private String LEmployeePassword;
     private String LEmployeeUserName;
 
@@ -10,6 +12,15 @@ public class LEmployee extends User{
             this.LEmployeePassword = password;
         }
 
+
+    @Override
+    public void objectToString(LEmployee lE){
+        System.out.println("Employee first name is: " + lE.getFirstName());
+        System.out.println("Employee last name is: " + lE.getLastName());
+        System.out.println("Employee gender is: " + lE.getGender());
+        System.out.println("Employee national code is: " + lE.getNationalCode());
+        System.out.println("Employee phone number is: " + lE.getPhoneNumber());
+    }
 
 
     public String getLEmployeeUserName() {return LEmployeeUserName;}

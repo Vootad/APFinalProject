@@ -1,6 +1,8 @@
 package sample.Model.LibraryP;
 
-public class Publisher {
+import sample.IF;
+
+public class Publisher implements IF<Publisher> {
     private String publisherCode;
     private String publisherCountry;
     private String publisherName;
@@ -12,6 +14,15 @@ public class Publisher {
     }
 
     public Publisher(){}
+
+
+    @Override
+    public void objectToString(Publisher p){
+        System.out.println("Publisher name is: " + p.getPublisherName());
+        System.out.println("Publisher code is: " + p.getPublisherCode());
+        System.out.println("Publisher country is: " + p.getPublisherCountry());
+    }
+
 
 
     public String getPublisherName() {return publisherName;}

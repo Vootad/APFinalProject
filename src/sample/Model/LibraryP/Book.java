@@ -2,7 +2,7 @@ package sample.Model.LibraryP;
 
 import sample.IF;
 
-public class Book {//implements IF {
+public class Book implements IF<Book> {
     private String bookName;
     private String bookId;  //unique
     private String bookSubject;
@@ -12,15 +12,18 @@ public class Book {//implements IF {
     private Author author = new Author();
 
 
-//    @Override
-//    public void objectToString(Book book){
-//        String id = book.getBookId();
-//        String name = book.getBookName();
-//        String subject = book.getBookSubject();
-//        Double price = book.getBookPrice();
-//        System.out.println("Book id is: " + id);
-//
-//    }
+    @Override
+    public void objectToString(Book book){
+        String id = book.getBookId();
+        String name = book.getBookName();
+        String subject = book.getBookSubject();
+        Double price = book.getBookPrice();
+        System.out.println("Book id is: " + id);
+        System.out.println("Book name is: " + name);
+        System.out.println("Book subject is: " + subject);
+        System.out.println("Book price is: " + price);
+    }
+
 
 
     public Book(String bookName , String bookId , String bookSubject , double bookPrice , Boolean bookCondition , Publisher publisher , Author author){

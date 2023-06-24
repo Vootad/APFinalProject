@@ -1,7 +1,9 @@
 package sample.Model.LibraryP;
 
+import sample.IF;
+
 import java.util.ArrayList;
-public class LMember extends User{
+public class LMember extends User implements IF<LMember>  {
     private String userName; //unique
     private String password;  //unique
     private String memberShipCode; //unique
@@ -19,6 +21,18 @@ public class LMember extends User{
     }
 
     public LMember(){}
+
+
+    @Override
+    public void objectToString(LMember lM){
+        System.out.println("Member first name is: " + lM.getFirstName());
+        System.out.println("Member last name is: " + lM.getLastName());
+        System.out.println("Member gender is: " + lM.getGender());
+        System.out.println("Member membership code is: " + lM.getMemberShipCode());
+    }
+
+
+
 
     public ArrayList<Book> getMemberBoughtBooksList() {
         return memberBoughtBooksList;

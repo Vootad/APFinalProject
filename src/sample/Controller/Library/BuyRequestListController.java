@@ -9,6 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sample.LoaderClass;
 import sample.Model.LibraryP.*;
 
 import javax.swing.*;
@@ -18,7 +19,7 @@ import java.util.ResourceBundle;
 import static sample.AL.*;
 import static sample.Controller.Library.LoginLMemberController.memberIndex;
 
-public class BuyBooksListController implements Initializable {
+public class BuyRequestListController implements Initializable {
     @FXML
     private TableView<BuyRequest> tableView;
     @FXML
@@ -47,6 +48,11 @@ public class BuyBooksListController implements Initializable {
     }
 
 
+    @FXML
+    public void Back(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.BackBtn.getScene().getWindow();
+        LoaderClass.ShowLEmployeePage();
+    }
     @FXML
     public void rejectBook(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.rejectBtn.getScene().getWindow();
