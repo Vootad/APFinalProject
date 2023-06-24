@@ -9,6 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sample.LoaderClass;
 import sample.Model.LibraryP.*;
 
 import javax.swing.*;
@@ -42,7 +43,7 @@ public class BuyBooksListController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         bName.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("bookName"));
         bSubject.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("bookSubject"));
-        memberName.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("firstName"));
+        memberName.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("fName"));
         tableView.setItems(list);
     }
 
@@ -96,4 +97,5 @@ public class BuyBooksListController implements Initializable {
             JOptionPane.showMessageDialog(null, "Select a row");
         }
     }
+    
 }
