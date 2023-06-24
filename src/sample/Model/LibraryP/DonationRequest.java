@@ -12,6 +12,20 @@ public class DonationRequest {
     }
 
 
+    public String getBookName(Book b){
+        return b.getBookName();
+    }
+    public String getBookId(Book b){
+        return b.getBookId();
+    }
+    public String getBookSubject(Book b){
+        return b.getBookSubject();
+    }
+    public String getName(LMember m){
+        return(m.getFirstName());
+    }
+
+
     public LMember getMember() {
         return member;
     }

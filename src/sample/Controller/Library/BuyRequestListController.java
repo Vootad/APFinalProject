@@ -102,5 +102,4 @@ public class BuyRequestListController implements Initializable {
             JOptionPane.showMessageDialog(null, "Select a row");
         }
     }
-    
 }

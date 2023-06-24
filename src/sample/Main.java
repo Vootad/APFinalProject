@@ -35,6 +35,12 @@ public class Main extends Application {
 
         Book b = new Book("a" , "a" , "a" , 123 , true , new Publisher() , new Author());
         booksList.add(b);
+
+        BorrowRequest br = new BorrowRequest(b , detaultMember , "borrowcode" , true);
+        borrowRequestList.add(br);
+
+        DonationRequest d = new DonationRequest(b , detaultMember , "req code");
+        donationRequestList.add(d);
         ////////////////////////////////////////////////////////////////////////
         launch(args);
 

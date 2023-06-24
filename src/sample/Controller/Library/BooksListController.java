@@ -55,6 +55,13 @@ public class BooksListController implements Initializable {
         try {
             Stage stage = (Stage) this.borrowBTN.getScene().getWindow();
             String bCode = borrowCode.getText();
+            for(int i=0; i<borrowRequestList.size(); i++){
+                if(bCode.equals(borrowRequestList.get(i).getBorrowCode())){
+                    JOptionPane.showMessageDialog(null, "Not unique borrow code!");
+                    break;
+                }
+            }
+
             allBooks = tableView.getItems();
             bookSelected = tableView.getSelectionModel().getSelectedItems();
             int selectedIndex = tableView.getSelectionModel().getSelectedIndex();

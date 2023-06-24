@@ -44,4 +44,13 @@ public class BuyRequest {
     public void setBuyCondition(Boolean buyCondition) {
         this.buyCondition = buyCondition;
     }
+    public String getBookName(){
+        return this.book.getBookName();
+    }
+    public String getBookSubject(){
+        return this.book.getBookSubject();
+    }
+    public String getFirstName(){
+        return this.lMember.getFirstName();
+    }
 }
