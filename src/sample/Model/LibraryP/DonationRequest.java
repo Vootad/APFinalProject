@@ -12,14 +12,14 @@ public class DonationRequest {
     }
 
 
-    public String getBookName(Book b){
-        return b.getBookName();
+    public String getBookName(){
+        return this.getBook().getBookName();
     }
-    public String getBookId(Book b){
-        return b.getBookId();
+    public String getBookId(){
+        return this.getBook().getBookId();
     }
-    public String getBookSubject(Book b){
-        return b.getBookSubject();
+    public String getBookSubject(){
+        return this.getBook().getBookSubject();
     }
     public String getName(LMember m){
         return(m.getFirstName());

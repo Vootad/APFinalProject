@@ -46,11 +46,6 @@ public class CreateLibraryController {
 
 
 
-
-
-
-
-
     @FXML
     public void CreateLibrary(){
         if (AL.LibraryList.size() == 0) {

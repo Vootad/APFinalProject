@@ -60,11 +60,12 @@ public class ARBookController implements Initializable {
     }
     public void deleteRow(){
         try{
-            allBookDonates = tableView.getItems();
-            bookDonatesSelected = tableView.getSelectionModel().getSelectedItems();
-            bookDonatesSelected.forEach(allBookDonates::remove);
+//            allBookDonates = tableView.getItems();
+//            bookDonatesSelected = tableView.getSelectionModel().getSelectedItems();
+//            bookDonatesSelected.forEach(allBookDonates::remove);
 
             int rejectedIndex = tableView.getSelectionModel().getSelectedIndex();
+            tableView.getItems().remove(rejectedIndex);
             donationRequestList.remove(rejectedIndex);
             System.out.println(donationRequestList.size());
         }

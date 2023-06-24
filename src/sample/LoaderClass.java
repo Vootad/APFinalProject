@@ -344,19 +344,19 @@ public class LoaderClass {
             System.out.println("Exception");
         }
     }
-    public static void BorrowBookPage(){
-        try {
-            Stage stage1 = new Stage();
-            FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/BorrowBook.fxml").toUri().toURL());
-            stage1.setScene(new Scene(root));
-            stage1.setResizable(false);
-            stage1.show();
-        }
-        catch (Exception e) {
-            System.out.println("Exception");
-        }
-    }
+//    public static void BorrowBookPage(){
+//        try {
+//            Stage stage1 = new Stage();
+//            FXMLLoader loader = new FXMLLoader();
+//            Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/BorrowBook.fxml").toUri().toURL());
+//            stage1.setScene(new Scene(root));
+//            stage1.setResizable(false);
+//            stage1.show();
+//        }
+//        catch (Exception e) {
+//            System.out.println("Exception");
+//        }
+//    }
     public static void ShowBorrowRequests(){
         try {
             Stage stage1 = new Stage();

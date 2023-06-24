@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import sample.Model.Library;
 import sample.Model.LibraryP.*;
 
 import java.nio.file.Paths;
@@ -27,20 +28,26 @@ public class Main extends Application {
     }
     public static void main(String[] args) {
         /////////////////////////////////////////////////////////////////////
-        LMember detaultMember = new LMember("ss","dd","ee","qq","male","ww","ere","","","22",null,null);
-        lMembersList.add(detaultMember);
 
-        LEmployee detaultEmployee = new LEmployee("ss","dd","ee","qq","male","ww","ere","","");
-        LElist.add(detaultEmployee);
-
-        Book b = new Book("a" , "a" , "a" , 123 , true , new Publisher() , new Author());
-        booksList.add(b);
-
-        BorrowRequest br = new BorrowRequest(b , detaultMember , "borrowcode" , true);
-        borrowRequestList.add(br);
-
-        DonationRequest d = new DonationRequest(b , detaultMember , "req code");
-        donationRequestList.add(d);
+//        Library l = new Library("1" , "1" , "1" , "1" , "1" , "1" , "1");
+//        AL.LibraryList.add(l);
+//
+//        LMember detaultMember = new LMember("ss","dd","ee","qq","male","ww","ere","","","22",null,null);
+//        lMembersList.add(detaultMember);
+//
+//        LEmployee detaultEmployee = new LEmployee("ss","dd","ee","qq","male","ww","ere","","");
+//        LElist.add(detaultEmployee);
+//
+//        Book b = new Book("a" , "a" , "a" , 123 , true , new Publisher() , new Author());
+//        booksList.add(b);
+//
+//        BorrowRequest br = new BorrowRequest(b , detaultMember , "borrowcode" , true);
+//        borrowRequestList.add(br);
+//        BorrowRequest brr = new BorrowRequest(b , detaultMember , "dzjfgnzo" , true);
+//        borrowRequestList.add(brr);
+//
+//        DonationRequest d = new DonationRequest(b , detaultMember , "req code");
+//        donationRequestList.add(d);
         ////////////////////////////////////////////////////////////////////////
         launch(args);
 

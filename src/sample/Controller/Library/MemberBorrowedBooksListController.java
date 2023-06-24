@@ -37,6 +37,7 @@ public class MemberBorrowedBooksListController implements Initializable {
     @FXML
     private Button returnBTN;
 
+    int memberIndex = LoginLMemberController.memberIndex;
 
     ObservableList<Book> bookSelected,allBooks;
 

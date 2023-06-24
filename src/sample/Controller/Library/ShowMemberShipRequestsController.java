@@ -20,8 +20,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import static sample.AL.lMembersList;
-import static sample.AL.memberRequests;
+import static sample.AL.*;
+
 public class ShowMemberShipRequestsController implements Initializable {
         @FXML
         private TableView<MemberRequest> tableView;
@@ -65,11 +65,15 @@ public class ShowMemberShipRequestsController implements Initializable {
         }
         public void deleteRow(){
                 try{
-                        allMemberRequests = tableView.getItems();
-                        memberRequestSelected = tableView.getSelectionModel().getSelectedItems();
-                        memberRequestSelected.forEach(allMemberRequests::remove);
+//                        allMemberRequests = tableView.getItems();
+//                        memberRequestSelected = tableView.getSelectionModel().getSelectedItems();
+//                        memberRequestSelected.forEach(allMemberRequests::remove);
 
                         int rejectedIndex = tableView.getSelectionModel().getSelectedIndex();
+                        tableView.getItems().remove(rejectedIndex);
+//                        donationRequestList.remove(rejectedIndex);
+
+//                        int rejectedIndex = tableView.getSelectionModel().getSelectedIndex();
                         memberRequests.remove(rejectedIndex);
                         System.out.println(memberRequests.size());
                 }

@@ -11,7 +11,7 @@ public class LMember extends User implements IF<LMember>  {
     private ArrayList<Book> memberBoughtBooksList = new ArrayList<>();
 
 
-    public LMember(String fName , String lName , String nationalCode , String age , String gender , String phoneNumber , String address , String username , String password , String memberShipCode , ArrayList<Book>Borrowed,ArrayList<Book>Bought){
+    public LMember(String fName , String lName , String nationalCode , String age , String gender , String phoneNumber , String address , String username , String password , String memberShipCode , ArrayList<Book>Borrowed , ArrayList<Book>Bought){
         super(fName , lName , nationalCode , age , gender , phoneNumber , address);
         this.userName = username;
         this.password = password;
@@ -64,7 +64,7 @@ public class LMember extends User implements IF<LMember>  {
     }
 
     public ArrayList<Book> getMemberBorrowedBooksList() {
-        return memberBorrowedBooksList;
+        return this.memberBorrowedBooksList;
     }
     public void setMemberBorrowedBooksList(ArrayList<Book> memberBorrowedBooksList) {
         this.memberBorrowedBooksList = memberBorrowedBooksList;

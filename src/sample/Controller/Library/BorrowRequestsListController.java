@@ -74,23 +74,21 @@ public class BorrowRequestsListController implements Initializable {
     }
     public void accept() {
         try {
-            allRequests = tableView.getItems();
-            selectedBook = tableView.getSelectionModel().getSelectedItems();
+
+            //////////////////////////////
+//            System.out.println(memberIndex);
+            ////////////////////////
+
             int acceptedIndex = tableView.getSelectionModel().getSelectedIndex();
-            String bookName = borrowRequestList.get(acceptedIndex).getBook().getBookName();
-            String bookSubject = borrowRequestList.get(acceptedIndex).getBook().getBookSubject();
-            String id = borrowRequestList.get(acceptedIndex).getBook().getBookId();
-            double price = borrowRequestList.get(acceptedIndex).getBook().getBookPrice();
-            Publisher publisher = borrowRequestList.get(acceptedIndex).getBook().getPublisher();
-            Author author = borrowRequestList.get(acceptedIndex).getBook().getAuthor();
 
-            Book book = new Book(bookName , id , bookSubject , price , false , publisher , author);
+            Book book = borrowRequestList.get(acceptedIndex).getBook();
+            borrowRequestList.get(acceptedIndex).getlMember().getMemberBorrowedBooksList().add(book);
+            tableView.getItems().remove(acceptedIndex);
 
-            lMembersList.get(memberIndex).getMemberBorrowedBooksList().add(book);
             borrowRequestList.remove(acceptedIndex);
 
-            selectedBook.forEach(allRequests::remove);
-            borrowRequestList.remove(acceptedIndex);
+//            selectedBook.forEach(allRequests::remove);
+//            borrowRequestList.remove(acceptedIndex);
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Select a row");

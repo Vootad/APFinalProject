@@ -51,6 +51,7 @@ public class BuyRequestListController implements Initializable {
     @FXML
     public void Back(javafx.event.ActionEvent event){
         Stage stage = (Stage) this.BackBtn.getScene().getWindow();
+        stage.close();
         LoaderClass.ShowLEmployeePage();
     }
     @FXML
@@ -60,11 +61,15 @@ public class BuyRequestListController implements Initializable {
     }
     public void deleteRow(){
         try{
-            allRequests = tableView.getItems();
-            selectedBook = tableView.getSelectionModel().getSelectedItems();
-            selectedBook.forEach(allRequests::remove);
+//            allRequests = tableView.getItems();
+//            selectedBook = tableView.getSelectionModel().getSelectedItems();
+//            selectedBook.forEach(allRequests::remove);
 
             int rejectedIndex = tableView.getSelectionModel().getSelectedIndex();
+            tableView.getItems().remove(rejectedIndex);
+//            donationRequestList.remove(rejectedIndex);
+
+//            int rejectedIndex = tableView.getSelectionModel().getSelectedIndex();
             buyRequestList.remove(rejectedIndex);
             System.out.println(buyRequestList.size());
         }
@@ -80,23 +85,19 @@ public class BuyRequestListController implements Initializable {
     }
     public void accept() {
         try {
-            allRequests = tableView.getItems();
-            selectedBook = tableView.getSelectionModel().getSelectedItems();
+//            allRequests = tableView.getItems();
+//            selectedBook = tableView.getSelectionModel().getSelectedItems();
             int acceptedIndex = tableView.getSelectionModel().getSelectedIndex();
-            String bookName = buyRequestList.get(acceptedIndex).getBook().getBookName();
-            String bookSubject = buyRequestList.get(acceptedIndex).getBook().getBookSubject();
-            String id = buyRequestList.get(acceptedIndex).getBook().getBookId();
-            double price = buyRequestList.get(acceptedIndex).getBook().getBookPrice();
-            Publisher publisher = buyRequestList.get(acceptedIndex).getBook().getPublisher();
-            Author author = buyRequestList.get(acceptedIndex).getBook().getAuthor();
 
-            Book book = new Book(bookName , id , bookSubject , price , false , publisher , author);
+            Book book = buyRequestList.get(acceptedIndex).getBook();
+//            lMembersList.get(memberIndex).getMemberBoughtBooksList().add(book);
+            buyRequestList.get(acceptedIndex).getlMember().getMemberBoughtBooksList().add(book);
 
-            lMembersList.get(memberIndex).getMemberBorrowedBooksList().add(book);
+            tableView.getItems().remove(acceptedIndex);
             buyRequestList.remove(acceptedIndex);
 
-            selectedBook.forEach(allRequests::remove);
-            buyRequestList.remove(acceptedIndex);
+//            selectedBook.forEach(allRequests::remove);
+//            buyRequestList.remove(acceptedIndex);
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Select a row");

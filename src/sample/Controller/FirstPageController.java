@@ -47,16 +47,6 @@ public class FirstPageController {
 
         Stage stage = (Stage) this.librarySystem.getScene().getWindow();
 
-
-        ////////////////////////////////////////////////////////////////////////////////////////
-        Library l = new Library("1" , "1" , "1" , "1" , "1" , "1" , "1");
-        AL.LibraryList.add(l);
-        /////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
         if (AL.LibraryList.size() == 1) {
                 stage.close();
             LoaderClass.showLibraryPage();
