@@ -11,6 +11,10 @@ import sample.Model.LibraryP.LEmployee;
 
 import javax.swing.*;
 
+import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import static sample.AL.LElist;
 
 public class CreateEmployeeOfLibaryController {
@@ -41,14 +45,34 @@ public class CreateEmployeeOfLibaryController {
     public void CreateEmployeeOfLibrary(javafx.event.ActionEvent event) {
         try {
             Stage stage = (Stage) this.EmployeeCreateBTN.getScene().getWindow();
+
+
             String leName = FName.getText();
+
             String leLastname = LName.getText();
+
             String leNationalCode = nationalCode.getText(); //unique ok
+
             String leAge = Employeeage.getText();
+
             String leGender = gender.getText();
+            if(!leGender.equals("Female") && !leGender.equals("female") && !leGender.equals("Male") && !leGender.equals("male")){
+                throw new IOException("Incorrect phone number");
+            }
+
             String lePhoneNumber = phoneNumber.getText();
+            String re = "09[0-3][0-9]-?[0-9]{3}-?[0-9]{4}";
+            Pattern pt = Pattern.compile(re);
+            Matcher mt = pt.matcher(lePhoneNumber);
+            boolean result = mt.matches();
+            if(!result){
+                throw new IOException("Incorrect phone number");
+            }
+
             String leAddress = address.getText();
+
             String leUserName = username.getText();  //unique ok
+
             String lePassword = password.getText();  //unique ok
             int n = 0;
 
