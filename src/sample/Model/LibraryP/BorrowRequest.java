@@ -14,10 +14,23 @@ public class BorrowRequest {
         this.borrowCondition = borrowCondition;
     }
 
+
+    public String getBookName(){
+        return this.book.getBookName();
+    }
+
+    public String getBookSubject(){
+        return this.book.getBookSubject();
+    }
+
+    public String getFirstName(){
+        return this.lMember.getFirstName();
+    }
+
+
     public void setBook(Book book) {
         this.book = book;
     }
-
     public Book getBook() {
         return book;
     }
@@ -25,7 +38,6 @@ public class BorrowRequest {
     public LMember getlMember() {
         return lMember;
     }
-
     public void setlMember(LMember lMember) {
         this.lMember = lMember;
     }
@@ -33,7 +45,6 @@ public class BorrowRequest {
     public String getBorrowCode() {
         return borrowCode;
     }
-
     public void setBorrowCode(String borrowCode) {
         this.borrowCode = borrowCode;
     }
@@ -41,7 +52,6 @@ public class BorrowRequest {
     public Boolean getBorrowCondition() {
         return borrowCondition;
     }
-
     public void setBorrowCondition(Boolean borrowCondition) {
         this.borrowCondition = borrowCondition;
     }

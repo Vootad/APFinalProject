@@ -60,6 +60,8 @@ public class BooksListController implements Initializable {
             int selectedIndex = tableView.getSelectionModel().getSelectedIndex();
             BorrowRequest borrowRequest = new BorrowRequest(booksList.get(selectedIndex), lMembersList.get(memberIndex), bCode, false);
             borrowRequestList.add(borrowRequest);
+            stage.close();
+            LoaderClass.ShowLMemberPage();
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null, "Select a row");

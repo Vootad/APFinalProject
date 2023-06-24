@@ -418,6 +418,7 @@ public class LoaderClass {
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(Paths.get("src/sample/View/Library/BooksList.fxml").toUri().toURL());
             stage1.setScene(new Scene(root));
+            stage1.setTitle("List of books");
             stage1.setResizable(false);
             stage1.show();
         }

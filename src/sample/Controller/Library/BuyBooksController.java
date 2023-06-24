@@ -64,6 +64,9 @@ public class BuyBooksController implements Initializable {
             BuyRequest buyRequest = new BuyRequest(booksList.get(selectedIndex), lMembersList.get(memberIndex), bCode, false);
             buyRequestList.add(buyRequest);
             System.out.println(buyRequestList.get(buyRequestList.size()-1).getBuyCode());
+
+            stage.close();
+            LoaderClass.ShowLMemberPage();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Select a row");
         }
