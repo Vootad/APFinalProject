@@ -43,7 +43,7 @@ public class BuyBooksListController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         bName.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("bookName"));
         bSubject.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("bookSubject"));
-        memberName.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("fName"));
+        memberName.setCellValueFactory(new PropertyValueFactory<BuyRequest,String>("firstName"));
         tableView.setItems(list);
     }
 
@@ -97,5 +97,11 @@ public class BuyBooksListController implements Initializable {
             JOptionPane.showMessageDialog(null, "Select a row");
         }
     }
-    
+    @FXML
+    public void Back(javafx.event.ActionEvent event){
+        Stage stage = (Stage) this.BackBtn.getScene().getWindow();
+        stage.close();
+        LoaderClass.ShowLMemberPage();
+    }
+
 }
